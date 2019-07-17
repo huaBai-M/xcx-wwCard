@@ -1,0 +1,57 @@
+  <view style='width:100%;height:100%;'>
+
+    <video id="myVideo" src="{{chuan.videoUrl}}" muted="{{false}}" controls="{{false}}" autoplay="{{true}}" loop="{{true}}" enable-progress-gesture="{{false}}" style='width:100%;height:100%;' objectFit='{{fill}}' direction='0' custom-cache="{{false}}" bindtimeupdate="vodeoLade"
+      bindtouchstart="handletouchtart" bindtouchmove="handletouchmove" bindtouchend="handletouchend">
+
+
+      <cover-image wx:if='{{ladeIf}}' src='{{chuan.previewImgUrl}}' mode='widthFix' class='ladeT'></cover-image>
+      <cover-view></cover-view>
+      <cover-image bindtap="{{!buttonClicked?'videoStop':''}}" wx:if='{{start}}' src='https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/btn_time_out.png' mode='widthFix' class='stopImg' catchtouchstart="handletouchtart" catchtouchmove="handletouchmove"
+        catchtouchend="handletouchend"></cover-image>
+      <cover-image bindtap="{{!buttonClicked?'clickPush':''}}" wx:if='{{!start}}' src='../../images/btn_empty.png' mode='widthFix' class='stopImg stopImgTran'></cover-image>
+
+
+      <cover-view class='container-me'>
+
+
+
+        <!-- 喜欢收藏按钮 -->
+        <block>
+          <cover-image wx:if="{{leftImg}}" class="leftImg" src='https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/leftImg.png' mode='widthFix'></cover-image>
+          <cover-view class="size-me likes" style='margin-top:30rpx;'>
+            <cover-image hidden="{{!red}}" class="likeimg" src='https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/btn_good_unclicked.png' mode='widthFix' bindtap="{{!buttonClicked?'likeVideoOrNot':''}}"></cover-image>
+            <cover-image hidden="{{red}}" class="likeimg" src='https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/btn_good_clicked.png' mode='widthFix' bindtap="{{!buttonClicked?'likeVideoOrNot':''}}"></cover-image>
+            <cover-view class="like" style='margin-top:10rpx;'>{{chuan.totalThumb}}</cover-view>
+          </cover-view>
+        </block>
+
+
+        <cover-view class="size-me zhuanfas" style='margin-top:40rpx;'>
+          <button class="btnShare" open-type="share">
+            <cover-image class='likeimg' src='https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/btn_forward.png' mode='widthFix'></cover-image>
+          </button>
+          <cover-view class="zhuanfa" style='margin-top:10rpx;'>{{chuan.totalTransfer}}</cover-view>
+        </cover-view>
+      </cover-view>
+
+      <cover-view class='container-bottom playMesg'>
+        <!-- xinxi -->
+        <cover-image class='showImgs' src="{{comName.cardImageUrl==null?'https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/head.jpg':comName.cardImageUrl}}"></cover-image>
+        <cover-view class='namePlay'>
+          <cover-view class='namep'>{{comName.name}}</cover-view>
+          <cover-view class='nump'>
+            <cover-image class="playimg" src='https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/icon_play.png' mode='widthFix' bindtap='likeVideoOrNot'></cover-image>
+            <cover-view class='numB'>{{chuan.totalVisit}}</cover-view>
+            <cover-image class="playimg playimg2" src='https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/icon_time.png' mode='widthFix' bindtap='likeVideoOrNot'></cover-image>
+            <cover-view class='timeB'>{{chuan.createTime}}</cover-view>
+          </cover-view>
+        </cover-view>
+
+      </cover-view>
+      <cover-view class='videoline'></cover-view>
+      <cover-view class='videoName'>{{chuan.title}}</cover-view>
+    </video>
+
+  </view>
+
+

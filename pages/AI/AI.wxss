@@ -1,0 +1,287 @@
+/* pages/AI/AI.wxss */
+.pageBody {
+    width: 100%;
+    min-height: 100%;
+    background-color: #f0f8ff;
+    box-sizing: border-box;
+    position: relative;
+}
+.van-ellipsis {
+    background:#eeeeee;
+}
+.tabChange .van-tabs__line {
+    background-color: #00a0e9;
+    height: 2px;
+    width: 120px !important;
+}
+.btns {
+    margin-top: 25rpx;
+    margin-left: 25rpx;
+}
+.btns>view {
+    padding: 20rpx 30rpx;
+    background-color: #10aeff;
+    color: #fff;
+    font-size: 34rpx;
+    display: inline-block;
+}
+.van-tabs {
+    min-height: 100%;
+    background-color: #f0f8ff;
+}
+.timeData {
+    border-radius: 10rpx 0 0 10rpx;
+}
+.yestoday {
+    border-radius: 0 10rpx 10rpx 0;
+}
+.btns .white {
+	background-color: #fff;
+	color: #333;  
+}
+.layoutCard {
+    width: 100%;
+    margin-top: 20rpx;
+    padding: 0 25rpx;
+    box-sizing: border-box;
+}
+.layoutCard .card {
+	height: 150rpx;
+	background-color: #fff;
+	border: 1px solid #e7e7e7;
+	border-radius: 10rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 35rpx;
+	margin-bottom: 20rpx;
+    position: relative;
+    overflow: hidden;
+}
+.layoutCard .card .iconfont {
+    width: 40%;
+}
+.layoutCard .card .iconfont image{
+	width: 80rpx;
+}
+.layoutCard .card .text-change {
+    width: 60%;
+	color: #333;
+	font-size: 32rpx;
+}
+.layoutCard .card .count {
+	color: #0084ff;
+	font-size: 36rpx;
+    text-align: center;
+    margin-top: 5rpx;
+}
+
+.views {
+	margin-top: 20rpx;
+	background-color: #fff;
+	padding-top: 23rpx;
+}
+.views .van-col--5 {
+	text-align: center;
+}
+.views image {
+	width: 50rpx;
+}
+
+.views .rightNum  {
+	display: flex;
+	height: 100rpx;
+	line-height: 100rpx;
+	padding-right: 45rpx; 
+	border-bottom: 1px solid #e7e7e7;
+}
+.views .rightNum .name {
+	text-align: left;
+	flex: 1;
+	color: #333;
+	font-size: 32rpx;
+	font-weight: 400;
+}
+.views .rightNum .count {
+	text-align: right;
+	color: #666;
+	font-size: 30rpx;
+	font-weight: 400;
+	flex: 1;
+}
+.views .van-col--4 {
+    text-align:center;
+    margin-top:24rpx;
+}
+.views van-row:last-child .rightNum{
+    border-bottom:none;
+}
+.tabChange .van-tabs__line{display: none}
+.tabChange .van-tab--active>.van-ellipsis{
+  border-bottom: 2px solid #00a0e9;
+  color: #00a0e9;
+}
+.tabChange .van-tab{
+  line-height:42px;
+
+}
+.aiReportForm{
+  margin-top: 26rpx;
+  background: #fff;
+}
+.aiReportForm .aiReportForm_abt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 38rpx 0;
+}
+.aiReportForm .aiReportForm_abt text{
+  width: 150rpx;
+  height:60rpx;
+  border-radius: 2000px;
+  border: 1px solid #858585;
+  color: #858585;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  margin: 0 20rpx;
+}
+.aiReportForm .aiReportForm_abt  .aiReportForm_abt_activeAbt{
+  color: #fff;
+  border-color: #00a0e9;
+  background: #00a0e9;
+}
+.aiReportForm  .aiReportForm_liistbox{
+  padding:20rpx 28rpx;
+  background: #ebebeb;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.aiReportForm  .aiReportForm_liistbox .aiReportForm_tabList{
+  width: 220rpx;
+  height: 220rpx;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  background: #fff;
+  margin: 5rpx 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #999999;
+}
+.aiReportForm  .aiReportForm_liistbox .aiReportForm_tabList .img{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.aiReportForm  .aiReportForm_liistbox .aiReportForm_tabList .h1{
+  margin: 19rpx 0 10rpx;
+}
+.aiReportForm  .aiReportForm_liistbox .aiReportForm_tabList .p{
+  font-weight: bold;
+}
+.aiReportForm .back{
+  padding: 18rpx 0;
+  background: #fff;
+}
+.aiReportForm_chart{
+  padding:0 28rpx;
+}
+.aiReportForm_chart .aiReportForm_chartH1{
+  font-size: 30rpx;
+  color: #333333;
+  padding: 30rpx 0 20rpx;
+}
+.aiReportForm_chart .aiReportForm_chart_abt{
+  font-size: 26rpx;
+  color: #666666;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 15rpx 20rpx;
+} 
+.aiReportForm_chart .aiReportForm_chart_abt .aiReportForm_abt_activechartAbt{
+  color: #00a0e9;
+}
+.aiReportFormImg{
+  text-align: center;
+  background: #fff;
+  /* margin: 22rpx; */
+  /* border-radius: 5px; */
+  /* border: 1px dashed #ccc; */
+  background: url("http://page-bucket.oss-cn-beijing.aliyuncs.com/wechat/mini-card/aiReportForm/AIbg.png") no-repeat center;
+  background-size: cover;
+  padding: 10px;
+  padding-top: 10px;
+}
+.aiReportFormImg .h1{
+  font-size: 32rpx;
+  color: #333333;
+  font-weight: bold;
+
+}
+.aiReportFormImg .p{
+  font-size: 26rpx;
+  color: #666666;
+  padding: 20rpx 0;
+}
+.aiReportFormImg .aiReportFormImg_abt{
+  font-size: 30rpx;
+  color: #fcf9f9;
+  width: 370rpx;
+  height: 80rpx;
+  border-radius: 5px;
+  background: #00a0e9;
+  line-height: 80rpx;
+  margin: auto;
+  margin-bottom: 30rpx;
+}
+.aiReportFormImg image {
+  width: 100%;
+}
+.gzh {
+  width: 94%;
+  height: 130rpx;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #fff;
+  margin-left: 3%;
+  margin-top: -23px;
+  position: relative;
+}
+.gzh .spare {
+  height: 130rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gzh image {
+  width: 85%;
+}
+.img0 image {
+  width: 80%;
+}
+.img1 {
+  margin-top: 0;
+}
+.img2  {
+  margin-top: 15px;
+}
+.img2 image {
+  width: 90%;
+}
+.img3  {
+  margin-top: 15px;
+}
+.viewsH {
+    padding-top: 0;
+}
+/* .viewsH van-row:nth-child(4) .rightNum{
+    border-bottom:none;
+} */

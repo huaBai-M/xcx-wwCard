@@ -1,0 +1,41 @@
+
+<!-- 交换名片弹框 -->
+<view class='tankuang' catchtouchmove='catchtouch'>
+  <van-popup show="{{openshow}}" bind:close="onClose" close-on-click-overlay="{{false}}">
+    <view class='contentChange'>
+      <text class='iconfont icon-guanbi rightClose' bindtap='changeHide'></text>
+      <view class='imgHead'>
+        <view class='leftImg'>
+          <image src="{{cardInfo.cardImageUrl==null?'https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/head.jpg':cardInfo.cardImageUrl}}" mode='widthFix' class=''></image>
+        </view>
+        <text class='iconfont icon-qiehuan'></text>
+        <view class='rightImg'>
+          <image src='{{visitorInfo.avatarUrl}}' mode='widthFix' class=''></image>
+        </view>
+      </view>
+      <view class='contentMesg'>
+        <view class='name msgC'>
+          <!-- <text class='str'>*</text> -->
+          <label>真实姓名</label>
+          <input type='text' data-value="{{information.name}}" data-type='name' bindinput='nameval' value='{{information.name}}' />
+        </view>
+        <view class='tel msgC'>
+          <!-- <text class='str'>*</text> -->
+          <label>手机</label>
+          <input type='text' data-value="{{information.tel}}" data-type='phone' value='{{information.tel}}' bindinput='nameval' />
+        </view>
+        <view class='company msgC'>
+          <label>公司名称</label>
+          <input type='text' value='{{information.company}}' data-value="{{information.company}}" data-type='company' placeholder='请输入您的公司名称' placeholder-style='font-size:14px;' bindinput='nameval' />
+        </view>
+        <view class='job msgC'>
+          <label>职位</label>
+          <input type='text' value='{{information.job}}' data-value="{{information.job}}" data-type='job' placeholder='请输入您的职位' placeholder-style='font-size:14px;' bindinput='nameval' />
+        </view>
+      </view>
+      <view class='btnChange'>
+        <button disabled='{{disabled}}' bindtap='clickCard'>交换名片</button>
+      </view>
+    </view>
+  </van-popup>
+</view>

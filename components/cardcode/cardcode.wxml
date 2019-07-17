@@ -1,0 +1,4 @@
+<view class='erweiCode' bindtap='erweimaAdd'>
+    <text class='iconfont icon-xiaochengxu'></text>
+    <view class='textCode'>名片码</view>
+</view>

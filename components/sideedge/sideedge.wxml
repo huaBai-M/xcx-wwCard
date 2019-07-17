@@ -1,0 +1,12 @@
+<!-- 侧边栏 -->
+<view class='side'>
+  <view class='sideShow' wx:if='{{sideHide}}' bindtap='clickSide'>
+    <text class='iconfont icon-gengduo'></text>
+  </view>
+  <view class='sideHide' wx:if='{{!sideHide}}'>
+    <view class="iconfont icon-liuyan {{!white?'blue':'white'}} btnMessage" bindtap='clickBlue' wx:if="{{stateShouQuan}}"></view>
+    <button wx:if="{{!stateShouQuan}}" open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumbers" class="iconfont icon-liuyan {{!white?'blue':'white'}} btnMessage">
+    </button>
+    <view class="iconfont icon-web-icon- {{white?'blue':'white'}}" bindtap='clickWhite'></view>
+  </view>
+</view>

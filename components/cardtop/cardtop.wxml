@@ -1,0 +1,173 @@
+<!-- 默认版 -->
+<view class="content content0" wx:if="{{molId==1}}">
+  <view class='leftContent'>
+    <view class='name'>{{cardData.name}}
+      <text class='job'>{{cardData.title==null?'':cardData.title}}</text>
+    </view>
+    <view class='line'></view>
+  </view>
+  <view class='rightContent'>
+    <image src="{{headImg==''?cardImageUrl:headImg}}" mode='widthFix'></image>
+  </view>
+  <view class='leftBottomContent'>
+    <view class='tel'>
+      <text class='iconfont icon-web-icon-'></text>{{cardData.telphone==null?'':cardData.telphone}}</view>
+    <view class='mail' wx:if="{{cardData.email!=null && cardData.email!=''}}">
+      <text class='iconfont icon-youxiang'></text>{{cardData.email==null?'':cardData.email}}</view>
+    <view class='company' wx:if="{{cardData.company!=null && cardData.company!=''}}">
+      <text class='iconfont icon-tubiao-'></text>{{cardData.company==null?'':cardData.company}}</view>
+  </view>
+  <view class='rightBottomContent'>
+    <image src="{{companyData.companyLogo}}" mode='widthFix'></image>
+  </view>
+</view>
+
+<!-- 模板2 -->
+<view class="content content1" wx:if="{{molId==3}}">
+  <view class='leftContent'>
+    <image src="{{headImg==''?cardImageUrl:headImg}}" mode='widthFix'></image>
+  </view>
+  <view class='midContent'>
+    <view class='name'>{{cardData.name}}
+      <text class='job'>{{cardData.title==null?'':cardData.title}}</text>
+    </view>
+  </view>
+  <view class='rightContent'>
+    <image src="{{companyData.companyLogo}}" mode='widthFix'></image>
+  </view>
+  <view class='leftBottomContent'>
+    <text class='iconfont icon-web-icon-' wx:if="{{cardData.telphone!=null && cardData.telphone!=''}}"></text>
+    <text class='iconfont icon-youxiang' wx:if="{{cardData.email!=null && cardData.email!=''}}"></text>
+    <text class='iconfont icon-tubiao-' wx:if="{{cardData.company!=null && cardData.company!=''}}"></text>
+  </view>
+  <view class='rightBottomContent'>
+    <view class='tel' wx:if="{{cardData.telphone!=null && cardData.telphone!=''}}">
+    {{cardData.telphone==null?'':cardData.telphone}}</view>
+    <view class='mail' wx:if="{{cardData.email!=null && cardData.email!=''}}">
+      {{cardData.email==null?'':cardData.email}}</view>
+    <view class='company' wx:if="{{cardData.company!=null && cardData.company!=''}}">
+      {{cardData.company==null?'':cardData.company}}</view>
+  </view>
+</view>
+
+<!-- 模板3 -->
+<view class="content content2" wx:if="{{molId==2}}">
+  <view class='leftContent'>
+    <view class='name'>{{cardData.name}}
+      <text class='job'>{{cardData.title==null?'':cardData.title}}</text>
+    </view>
+  </view>
+  <view class='leftBottomContent'>
+    <view class='tel'>
+      <text class='iconfont icon-web-icon-'></text>{{cardData.telphone==null?'':cardData.telphone}}</view>
+    <view class='mail' wx:if="{{cardData.email!=null && cardData.email!=''}}">
+      <text class='iconfont icon-youxiang'></text>{{cardData.email==null?'':cardData.email}}</view>
+    <view class='company' wx:if="{{cardData.company!=null && cardData.company!=''}}">
+      <text class='iconfont icon-tubiao-'></text>{{cardData.company==null?'':cardData.company}}</view>
+  </view>
+  <view class='rightBottomContent'>
+    <image src="{{companyData.companyLogo}}" mode='widthFix'></image>
+  </view>
+</view>
+
+<!-- 模板4 -->
+<view class="content content3" wx:if="{{molId==4}}">
+  <view class='rightBottomContent'>
+    <image src="{{companyData.companyLogo}}" mode='widthFix'></image>
+  </view>
+  <view class='rightContent'>
+    <image src="{{headImg==''?cardImageUrl:headImg}}" mode='widthFix'></image>
+  </view>
+  <view class='leftContent'>
+    <view class='name'>{{cardData.name}}
+      <text class='job'>{{cardData.title==null?'':cardData.title}}</text>
+    </view>
+  </view>
+  
+  <view class='leftBottomContent'>
+    <view class='tel'>
+      <text class='iconfont icon-web-icon-'></text>{{cardData.telphone==null?'':cardData.telphone}}</view>
+    <view class='mail' wx:if="{{cardData.email!=null && cardData.email!=''}}">
+      <text class='iconfont icon-youxiang'></text>{{cardData.email==null?'':cardData.email}}</view>
+    <view class='company' wx:if="{{cardData.company!=null && cardData.company!=''}}">
+      <text class='iconfont icon-tubiao-'></text>{{cardData.company==null?'':cardData.company}}</view>
+
+  </view>
+  
+</view>
+
+
+
+
+<!-- 模板5 -->
+<view class="content content4" wx:if="{{molId==5}}">
+  <view class='leftContent'>
+    <view class='name'>{{cardData.name}}
+      <text class='job'>{{cardData.title==null?'':cardData.title}}</text>
+    </view>
+    <view class='line'></view>
+  </view>
+  <view class='rightBottomContent'>
+    <image src="{{companyData.companyLogo}}" mode='widthFix'></image>
+  </view>
+  <view class='leftBottomContent'>
+    <view class='tel'>
+      <text class='iconfont icon-web-icon-'></text>{{cardData.telphone==null?'':cardData.telphone}}</view>
+    <view class='mail' wx:if="{{cardData.email!=null && cardData.email!=''}}">
+      <text class='iconfont icon-youxiang'></text>{{cardData.email==null?'':cardData.email}}</view>
+    <view class='company' wx:if="{{cardData.company!=null && cardData.company!=''}}">
+      <text class='iconfont icon-tubiao-'></text>{{cardData.company==null?'':cardData.company}}</view>
+  </view>
+  
+  
+</view>
+
+
+<!-- 模板6 -->
+<view class="content content5" wx:if="{{molId==7}}">
+  <view class='leftContent'>
+    <view class='name'>{{cardData.name}}
+      <text class='job'>{{cardData.title==null?'':cardData.title}}</text>
+    </view>
+  </view>
+  <view class='rightContent'>
+    <image src="{{headImg==''?cardImageUrl:headImg}}" mode='widthFix'></image>
+  </view>
+  <view class='leftBottomContent'>
+    <view class='tel'>
+      <text class='iconfont icon-web-icon-'></text>{{cardData.telphone==null?'':cardData.telphone}}</view>
+    <view class='mail' wx:if="{{cardData.email!=null && cardData.email!=''}}">
+      <text class='iconfont icon-youxiang'></text>{{cardData.email==null?'':cardData.email}}</view>
+    <view class='company' wx:if="{{cardData.company!=null && cardData.company!=''}}">
+      <text class='iconfont icon-tubiao-'></text>{{cardData.company==null?'':cardData.company}}</view>
+  </view>
+  <view class='rightBottomContent'>
+    <image src="{{companyData.companyLogo}}" mode='widthFix'></image>
+  </view>
+  
+</view>
+
+<!-- 模板7 -->
+<view class="content content6" wx:if="{{molId==6}}">
+  <view class='rightBottomContent'>
+    <image src="{{companyData.companyLogo}}" mode='widthFix'></image>
+  </view>
+  <view class='leftContent'>
+    <view class='name'>{{cardData.name}}
+      <text class='job'>{{cardData.title==null?'':cardData.title}}</text>
+    </view>
+  </view>
+  <view class='rightContent'>
+    <image src="{{headImg==''?cardImageUrl:headImg}}" mode='widthFix'></image>
+  </view>
+  <view class='leftBottomContent'>
+    <view class='tel'>
+      <text class='iconfont icon-web-icon-'></text>{{cardData.telphone==null?'':cardData.telphone}}</view>
+    <view class='mail' wx:if="{{cardData.email!=null && cardData.email!=''}}">
+      <text class='iconfont icon-youxiang'></text>{{cardData.email==null?'':cardData.email}}</view>
+    <view class='company' wx:if="{{cardData.company!=null && cardData.company!=''}}">
+      <text class='iconfont icon-tubiao-'></text>{{cardData.company==null?'':cardData.company}}</view>
+  </view>
+  
+  
+</view>

@@ -1,0 +1,87 @@
+/* pages/bangding/bangding.wxss */
+page {
+    width: 100%;
+    height: 100%;
+}
+.pageBody {
+    width: 100%;
+    min-height: 100%;
+    background-color: #eef7ff;
+}
+.headImg {
+    width: 96%;
+    margin-left: 2%;
+    background-color: #fff;
+    border-radius: 25rpx;
+    padding: 0 20rpx;
+    margin-top: 20rpx;
+    box-sizing: border-box;
+}
+.msg {
+    display: flex;
+    flex-grow: grow;
+    height: 100rpx;
+    align-items: center;
+}
+.msg text {
+    width: 60px;
+    color: #000;
+    font-size: 14px;
+}
+.msg input {
+    margin-left: 10rpx;
+    flex: 1;
+}
+.msg .icon-icon_see {
+    flex: 1;
+    text-align: right;
+}
+.base-mesg {
+    margin-top: 20rpx;
+    background-color: #fff;
+    border-radius: 25rpx;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 0 0 20rpx;
+    width: 96%;
+    margin-left: 2%;
+    /* box-shadow: 0 0 20rpx #ccc; */
+}
+.base-mesg .msg {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: 100rpx;
+}
+.msg .click {
+    color: #0458ff;
+    font-size: 12px;
+    text-align: center;
+    background-color: transparent;
+    margin-right: 10rpx;
+    border-color: transparent;
+
+}
+.btns {
+    margin: 50px 0;
+}
+.btns button {
+    width: 90%;
+    height: 40px;
+    font-size: 32rpx;
+    color: #fff;
+    background-color: #378bfc;
+    border-radius: 8px;
+    line-height: 40px;
+}
+
+.displayPhone text{
+  font-size: 24rpx;
+  display: block;
+  padding:5rpx 26rpx;
+
+}
+.displayPhone  .btns{
+  margin: 25rpx 0;
+}

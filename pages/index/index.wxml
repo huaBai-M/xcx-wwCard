@@ -1,0 +1,57 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<view class='indexbox'>
+<change  id="changebox" bind:myevent2="onMyEvent2"></change>
+  <van-toast id="van-toast" />
+  <empower></empower>
+  <view class='addLine'>
+    <form bindsubmit="formSubmit" report-submit="true" class="inputRoomAbtT1" wx:if="{{showform}}">
+       <button form-type="submit"  bindtap='calling'  class='back'><text class='iconfont icon-jinru-copy'></text> 名片列表</button>
+    </form>
+    <view class='back'bindtap='calling'>
+      <text class='iconfont icon-jinru-copy'></text> 名片列表
+    </view>
+    <form bindsubmit="formSubmit1" report-submit="true" class="inputRoomAbtT2" wx:if="{{showform1}}">
+       <button form-type="submit"  bindtap='createdCard' wx:if="{{visitorInfo.registState==0}}" class='created-my-card created-my-cardt'><text class='iconfont icon-chuangjian'></text> 创建/登录</button>
+    </form>
+    <view class='created-my-card created-my-cardt' bindtap='createdCard' wx:if="{{visitorInfo.registState==0}}">
+      <text class='iconfont icon-chuangjian'></text> 创建/登录
+    </view>
+    <form bindsubmit="formSubmit2" report-submit="true" class="inputRoomAbtT3" wx:if="{{showform2}}">
+       <button form-type="submit"  class='created-my-card' wx:if="{{userState}}" bindtap='findCardInfo'><text class='iconfont icon-jinru'></text> 进入我的名片</button>
+    </form>
+    <view class='created-my-card' wx:if="{{userState}}" bindtap='findCardInfo'>
+      <text class='iconfont icon-jinru'></text> 进入我的名片
+       <form bindsubmit="formSubmit2" report-submit="true" class="inputRoomAbtT3" >
+        <button form-type="submit"  class='created-my-card'  >
+          <text class='iconfont icon-jinru'></text> 进入我的名片
+        </button>
+      </form>
+    </view>
+    
+  </view>
+  <!-- 名片 -->
+  <cardtop id="cardtop" molId="{{molId}}" headImg="{{headImg}}"></cardtop>
+  <!-- 交换名片等... -->
+  <owndata wx:if="{{cardData.id==visitorInfo.bindWxCardEmployeeId}}" ></owndata>
+  <othersdata bind:myevent="onMyEvent" wx:if="{{cardData.id!=visitorInfo.bindWxCardEmployeeId}}" id="othersdata" card="{{cardData}}" stateShouQuan="{{stateShouQuan}}"></othersdata>
+  <!-- <button bindtap='openexchangecard'>打开</button> -->
+  <view class='titleB titleBT'>本期推荐</view>
+  <recommend id="recommend" product="{{HotProduct}}" wx:if="{{HotProduct.length!=0}}"></recommend>
+  <gratis wx:if="{{(!userState)&&cardData.registState!=1}}" text="{{'产品推荐'}}"></gratis>
+  <!--公司信息  -->
+  <view class="introduce" >
+    <view class='titleB'>公司介绍</view>
+    <view class='have' wx:if="{{companyInfo!=null}}">
+      <image src='{{companyInfo.banner}}' mode='widthFix' class='comImg'></image>
+      <view class='texts' wx:if="{{companyInfo.description!=null}}">
+        <template is="wxParse" data="{{wxParseData:description.nodes}}"/>
+      </view>
+    </view>
+  </view>
+  <!-- 免费用户提示 -->
+  <gratis wx:if="{{(!userState)&&cardData.registState!=1}}" text="{{'公司介绍'}}"></gratis>
+
+  <sideedge wx:if="{{userState}}" stateShouQuan="{{stateShouQuan}}"></sideedge>
+  <!-- 弹出框 -->
+  <exchangecard id="exchangecard" openshow='{{show}}' telphone="{{telphone}}"></exchangecard>
+</view>

@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "名片列表",
+  "usingComponents": {
+    "cardlists": "/components/cardlists/cardlists",
+    "groupimg": "/components/groupimg/groupimg",
+    "painter": "/components/painter/painter",
+    "van-popup": "../../dist/popup/index",
+    "van-picker": "../../dist/picker/index",
+    "van-dialog": "../../dist/dialog/index"
+  }
+}

@@ -1,0 +1,67 @@
+.add-renqi {
+    height: 90rpx;
+    line-height: 90rpx;
+    color: #666;
+    font-size: 30rpx;
+    display: flex;
+    float: right;
+    padding-right: 6%;
+    box-sizing: border-box;
+}
+.add-renqi>view {
+    color: #666;
+    margin-left: 10rpx;
+}
+.operate {
+    width: 90%;
+    margin: 0 auto;
+    height: 130rpx;
+    background-color: #fff;
+    display: flex;
+    margin-top: 25rpx;
+    border-radius: 30rpx;
+    /* box-shadow: 0 0 20rpx #c4daf6; */
+    align-items: center;
+    overflow: hidden;
+    border: none;
+}
+
+.operate .ope {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #666;
+    font-size: 24rpx;
+    border: 0rpx solid red;
+    box-shadow: none;
+    padding-left: 0;
+    padding-right: 0;
+    line-height: normal;
+    background: none;
+    border-right: 1rpx solid #eee;
+    overflow: hidden;
+}
+
+.operate .ope::after {
+    border: 0;
+}
+
+.operate .ope:last-child {
+    border-right: none;
+}
+.renqi image {
+    width: 40rpx;
+    margin-bottom: 10rpx;
+}
+
+.dianzan image {
+    width: 50rpx;
+    margin-bottom: 10rpx;
+}
+
+.zhuanfa image {
+    width: 55rpx;
+    margin-bottom: 10rpx;
+}

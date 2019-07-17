@@ -1,0 +1,158 @@
+<!--pages/AI/AI.wxml-->
+<page>
+    <scroll-view class='pageBody'>
+        <view class='tabChange'>
+            <van-tabs>
+                <van-tab title="行为">
+                     <view class='btns'>
+                        <view class="timeData {{white ? '' : 'white'}}" bindtap='getDataAll'>实时数据</view>
+                        <view class="yestoday' {{white ? 'white' : ''}}" bindtap='getDataYes'>昨日</view>
+                     </view>
+
+                     <view class='layoutCard'>
+                       <van-row gutter="20">
+                        <van-col span="12">
+                            <view class="card" bindtap="saveCalls" data-type="交换名片">
+							<view class="iconfont"><image src='http://page-bucket.oss-cn-beijing.aliyuncs.com/wechat/mini-card/aiReportForm/icon-a@2x.png' mode='widthFix'></image></view>
+							<view class="text-change">
+								<view class="name">交换名片</view>
+								<view class="count">{{aiRecord.changeCard }}</view>
+							</view>
+						  </view>
+                        </van-col>
+                        <van-col span="12">
+                            <view class="card" bindtap="saveCalls" data-type="拨打电话">
+							<view class="iconfont"><image src='http://page-bucket.oss-cn-beijing.aliyuncs.com/wechat/mini-card/aiReportForm/icon-b@2x.png' mode='widthFix'></image></view>
+							<view class="text-change">
+								<view class="name">拨打电话</view>
+								<view class="count">{{aiRecord.callPhone }}</view>
+							</view>
+						  </view>
+                        </van-col>
+                        <van-col span="12">
+                            <view class="card" bindtap="saveCalls" data-type="咨询客服">
+							<view class="iconfont"><image src='http://page-bucket.oss-cn-beijing.aliyuncs.com/wechat/mini-card/aiReportForm/iconc@2x.png' mode='widthFix'></image></view>
+							<view class="text-change">
+								<view class="name">咨询客服</view>
+								<view class="count">{{aiRecord.consultService }}</view>
+							</view>
+						  </view>
+                        </van-col>
+                        <van-col span="12">
+                            <view class="card" bindtap="saveCalls" data-type="保存电话">
+							<view class="iconfont"><image src='http://page-bucket.oss-cn-beijing.aliyuncs.com/wechat/mini-card/aiReportForm/icond@2x.png' mode='widthFix'></image></view>
+							<view class="text-change">
+								<view class="name">保存电话</view>
+								<view class="count">{{aiRecord.savePhone }}</view>
+							</view>
+						  </view>
+                        </van-col>
+                       </van-row>
+                     </view>
+
+                     <view class="views" wx:if="{{aiReportForm}}">
+                        <van-row wx:for="{{viewDatas}}" wx:key="{{index}}" bindtap="saveCalls" data-type="{{item.name}}">
+                        <van-col span="4"><image src="{{item.img}}" mode='widthFix'></image></van-col>
+                        <van-col span="20">
+                            <view class="rightNum">
+                                <view class="name">{{item.name}}</view>
+                                <view class="count" wx:if="{{index==0}}">{{aiRecord.viewCard }}</view>
+                                <view class="count" wx:if="{{index==1}}">{{aiRecord.viewItem }}</view>
+                                <view class="count" wx:if="{{index==2}}">{{aiRecord.forwardCard }}</view>
+                                <view class="count" wx:if="{{index==3}}">{{aiRecord.copyWechat }}</view>
+                                <view class="count" wx:if="{{index==4}}">{{aiRecord.viewMV }}</view>
+                                <view class="count" wx:if="{{index==5}}">{{aiRecord.pickLikeMV }}</view>
+                                <view class="count" wx:if="{{index==6}}">{{aiRecord.forwardMV }}</view>
+                            </view>
+                        </van-col>
+                        </van-row>
+			        </view>
+                    
+                     <view class="views viewsH" wx:if="{{!aiReportForm}}">
+                        <van-row wx:for="{{viewDatas}}" wx:key="{{index}}" bindtap="saveCalls" data-type="{{item.name}}">
+                        <van-col span="4">
+                            <image src="{{item.img}}" mode='widthFix' wx:if="{{index==2 || index==3}}"></image>
+                        </van-col>
+                        <van-col span="20">
+                            <view class="rightNum" wx:if="{{index==2 || index==3}}">
+                                <view class="name">{{item.name}}</view>
+                                <view class="count" wx:if="{{index==2}}">{{aiRecord.forwardCard }}</view>
+                                <view class="count" wx:if="{{index==3}}">{{aiRecord.copyWechat }}</view>
+                            </view>
+                        </van-col>
+                        </van-row>
+			        </view>
+                </van-tab>
+                <van-tab title="查看更多数据">
+                  <view class='aiReportForm' wx:if="{{aiReportForm}}">
+                      <view class='aiReportForm_abt'>
+                          <text class=' {{activeNum==0?"aiReportForm_abt_activeAbt":""}}' data-index="0" bindtap='aiReportAbtEven'>昨天</text>
+                          <text class=' {{activeNum==1?"aiReportForm_abt_activeAbt":""}}' data-index="1" bindtap='aiReportAbtEven'>近七天</text>
+                          <text class=' {{activeNum==2?"aiReportForm_abt_activeAbt":""}}' data-index="2" bindtap='aiReportAbtEven'>近三十天</text>
+                      </view>
+                      <!--  -->
+                      <view class='aiReportForm_liistbox'>
+                        <view class='aiReportForm_tabList' wx:for="{{aiReportFormTabList}}" wx:key="idx" wx:for-index="idx" wx:for-item="item">
+                            <view class='img'>
+                              <image  wx:if="{{idx==0}}"src='http://page-bucket.oss-cn-beijing.aliyuncs.com/wechat/mini-card/aiReportForm/icon-11@2x.png' style='width:70rpx;height:70rpx;'></image>
+                               <image  wx:if="{{idx==1}}"src='http://page-bucket.oss-cn-beijing.aliyuncs.com/wechat/mini-card/aiReportForm/icon-02@2x.png' style='width:70rpx;height:70rpx;'></image>
+                                <image  wx:if="{{idx==2}}"src='http://page-bucket.oss-cn-beijing.aliyuncs.com/wechat/mini-card/aiReportForm/icon-03@2x.png' style='width:70rpx;height:70rpx;'></image>
+                                 <image  wx:if="{{idx==3}}"src='http://page-bucket.oss-cn-beijing.aliyuncs.com/wechat/mini-card/aiReportForm/icon-04@2x.png' style='width:70rpx;height:70rpx;'></image>
+                                  <image  wx:if="{{idx==4}}"src='http://page-bucket.oss-cn-beijing.aliyuncs.com/wechat/mini-card/aiReportForm/icon-05@2x.png' style='width:70rpx;height:70rpx;'></image>
+                                   <image  wx:if="{{idx==5}}"src='http://page-bucket.oss-cn-beijing.aliyuncs.com/wechat/mini-card/aiReportForm/icon-06@2x.png' style='width:70rpx;height:70rpx;'></image>
+                            </view>
+                            <view class='h1'>{{item.h1}}</view>
+                            <view class='p'>{{item.p}}</view>
+                        </view>
+                      </view>
+                      <view class='aiReportForm_chart'>
+                            <view class='aiReportForm_chartH1'>数据总览趋势</view>
+                            <view class='aiReportForm_chart_abt'>
+                                <text class=' {{activeChartNum==0?"aiReportForm_abt_activechartAbt":""}}' data-name="浏览数" data-index="0" bindtap='aiReportchartAbtEven'>浏览数</text>
+                                <text class=' {{activeChartNum==1?"aiReportForm_abt_activechartAbt":""}}' data-name="转发数" data-index="1" bindtap='aiReportchartAbtEven'>转发数</text>
+                                <text class=' {{activeChartNum==2?"aiReportForm_abt_activechartAbt":""}}' data-name="客户数" data-index="2" bindtap='aiReportchartAbtEven'>客户数</text>
+                                <text class=' {{activeChartNum==3?"aiReportForm_abt_activechartAbt":""}}' data-name="跟进数" data-index="3" bindtap='aiReportchartAbtEven'>跟进数</text>
+                                <text class=' {{activeChartNum==4?"aiReportForm_abt_activechartAbt":""}}' data-name="点赞数" data-index="4" bindtap='aiReportchartAbtEven'>点赞数</text>
+                                <text class=' {{activeChartNum==5?"aiReportForm_abt_activechartAbt":""}}' data-name="咨询数" data-index="5" bindtap='aiReportchartAbtEven'>咨询数</text>
+                            </view>
+                           
+                      </view>
+                       <!-- canvas -->
+                            <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler" style="width:{{windowWidth}}px;height:{{windowHeight}}px;;"></canvas>
+                      <view class='back'></view>
+                  </view>
+                
+                    <!-- 免费版用户 -->
+                    <view class='aiReportFormImg' wx:if="{{!aiReportForm}}">
+                      <!-- <view class='h1'>数据报表</view>
+                      <view class='p'>数据报表实时记录名片所有数据行为</view>
+                      <view class='img'>
+                        <image src='http://page-bucket.oss-cn-beijing.aliyuncs.com/wechat/mini-card/aiReportForm/aiReportFormImg.jpg' style='width:560rpx;height:788rpx;'></image>
+                      </view>
+                      <view class='aiReportFormImg_abt'  bindtap='opendialog'>
+                        立即申请企业版
+                      </view> -->
+                      <view class='img0'>
+                        <image src='http://page-bucket.oss-cn-beijing.aliyuncs.com/wechat/mini-card/aiReportForm/xinshouzhinan@3x.png'  mode='widthFix'></image>
+                      </view>
+                      <view class='img1'>
+                        <image src='http://page-bucket.oss-cn-beijing.aliyuncs.com/wechat/mini-card/aiReportForm/pic1@3x.png'  mode='widthFix'></image>
+                      </view>
+                     <view class="gzh">
+                        <official-account binderror="binderror"></official-account>
+                        <view class="spare" wx:if="{{stateImg}}"><image src="http://page-bucket.oss-cn-beijing.aliyuncs.com/wechat/mini-card/aiReportForm/pic5@3x.png" mode='widthFix'></image></view>
+                      </view>
+                      <view class='img2'>
+                        <image src='http://page-bucket.oss-cn-beijing.aliyuncs.com/wechat/mini-card/aiReportForm/Apic4@3x.png'  mode='widthFix'></image>
+                      </view>
+                      <view class='img3'>
+                        <image src='http://page-bucket.oss-cn-beijing.aliyuncs.com/wechat/mini-card/aiReportForm/Apicc2.png'  mode='widthFix'></image>
+                      </view>
+                    </view>
+                </van-tab>
+            </van-tabs>
+        </view>
+       
+    </scroll-view>
+    <van-dialog id="van-dialog" />
+</page>

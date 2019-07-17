@@ -1,0 +1,27 @@
+page{
+  width:100%;
+min-height:100%;
+background-color:#f0f8ff;
+box-sizing:border-box;
+position:relative;
+text-align:center;
+padding:20rpx 3% 70rpx 3%;
+
+}
+.input-content .van-cell__title {
+    text-align: left;
+}
+.btns {
+    margin-top: 40rpx;
+}
+.btns .van-button--normal {
+    padding: 0;
+    width: 40%;
+    margin: 0 5%;
+    border-radius: 5px;
+    font-size: 17px;
+}
+.btns .van-button--default {
+    background-color: #bfbfbf;
+    color: #fff;
+}

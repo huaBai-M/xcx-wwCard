@@ -1,0 +1,206 @@
+@import "/font/iconfont.wxss";
+.operate {
+    width: 90%;
+    margin: 0 auto;
+    height: 130rpx;
+    background-color: #fff;
+    display: flex;
+    margin-top: 25rpx;
+    border-radius: 30rpx;
+    /* box-shadow: 0 0 20rpx #c4daf6; */
+    align-items: center;
+    overflow: hidden;
+    border: none;
+}
+
+.operate .ope {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #666;
+    font-size: 24rpx;
+    border: 0rpx solid red;
+    box-shadow: none;
+    padding-left: 0;
+    padding-right: 0;
+    line-height: normal;
+    background: none;
+    border-right: 1rpx solid #eee;
+    overflow: hidden;
+    
+}
+
+.operate .ope::after {
+    border: 0;
+}
+
+.operate .ope:last-child {
+    border-right: none;
+}
+.renqi image {
+    width: 40rpx;
+    margin-bottom: 10rpx;
+}
+
+.dianzan image {
+    width: 50rpx;
+    margin-bottom: 10rpx;
+}
+
+.zhuanfa image {
+    width: 55rpx;
+    margin-bottom: 10rpx;
+}
+.callCode image {
+    width: 50rpx;
+}
+.callMessage {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    height: 65px;
+    box-sizing: border-box;
+    margin-top: 14px;
+    background: #fff;
+    border-radius: 30rpx ;
+    
+    overflow:hidden;
+}
+.callMessageradius{
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.title {
+    font-size: 30rpx;
+    color: #333;
+    /* height: 65px; */
+}
+.text-zhankai {
+    position: absolute;
+    bottom: 34rpx;
+    left: 5%;
+    width: 80%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 32rpx;
+}
+.addContent {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: -15px;
+    background: #fff;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+    border-radius: 30rpx ;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding-bottom: 20rpx;
+}
+.addContent .mesg {
+    margin-top: 30rpx;
+    display: flex;
+    height: 80rpx;
+    align-items: center;
+}
+
+.addContent .iconfont {
+    width: 8%;
+    color: #333;
+    font-size: 30rpx;
+}
+
+.addContent .text {
+    width: 12%;
+    color: #999;
+    font-size: 28rpx;
+}
+
+.addContent .item {
+    width: 65%;
+    color: #333;
+    font-size: 28rpx;
+}
+
+.addContent .btn {
+    width: 15%;
+    height: 45rpx;
+    border: 1px solid #006cff;
+    color: #006cff;
+    font-size: 24rpx;
+    text-align: center;
+    line-height: 45rpx;
+    border-radius: 22rpx;
+}
+.btns {
+    margin-top: 30rpx;
+    text-align: center;
+}
+
+.btns button {
+    width: 43%;
+    display: inline-block;
+    background-color: #fff;
+}
+
+.btns button::after {
+    border: none;
+}
+
+.btns button {
+    border: 1px solid #378bfc;
+    color: #378bfc;
+    font-size: 32rpx;
+}
+
+.btns .change {
+    margin-right: 3%;
+}
+
+.btns .change {
+    margin-right: 3%;
+}
+
+.btns .synchro {
+    background:#378bfc;
+
+    color: #fff;
+}
+.callMessagebox{
+  position: relative;
+  width: 100%
+}
+.erweiCode {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 75px;
+    height: 65px;
+    background: url("https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/aside.png") no-repeat top;
+    background-size: contain;
+    z-index: 9;
+    overflow: hidden;
+}
+.erweiCode .icon-xiaochengxu {
+    font-size: 22px;
+    position: absolute;
+    right: 26px;
+    top: 21px;
+    z-index: 999;
+    color: #006cff;
+}
+.textCode {
+    width:25px;
+    height:65px;
+    color:#333;
+    font-size:13px;
+    float:left;
+    position:absolute;
+    right:-3px;
+    top:3px;
+    padding-top: 2px;
+    box-sizing: border-box;
+}

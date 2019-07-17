@@ -1,0 +1,6 @@
+/* pages/AIHref/AIHref.wxss */
+.aihref_abt{
+  position: fixed;
+  bottom:0;
+  z-index: 99999;
+}

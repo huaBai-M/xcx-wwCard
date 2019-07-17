@@ -1,0 +1,32 @@
+<!--pages/bangding/bangding.wxml-->
+<page>
+    <scroll-view class='pageBody'>
+        <view class='headImg'>
+           <view class='msg'><text>手机号码</text><input placeholder="输入有效手机号码" type='number' maxlength='11' placeholder-style="font-size:14px;" value='{{tel}}' bindinput='formName'/>
+            <button wx:if="{{!send}}" class='click' bindtap='clickPost'>点击获取验证码</button>
+            <button wx:if="{{send}}" class='click' bindtap='clickPost' disabled="true">{{currentTime+"s"}}后重新发送</button>
+           </view>
+        </view>
+        <view class='base-mesg'>
+            <view class='msg'><text>验证码</text><input placeholder="请输入验证码" value='{{code}}' placeholder-style="font-size:14px;" bindinput='formCode' type="number" maxlength="6"/>
+            </view>
+        </view>
+
+        <view class='displayPhone' wx:if="{{telphoneDisplay}}">
+            <text>该手机号仅作为名片信息展示 </text>
+            <text>与名片登录账号和信融科技生意帮登录账号无关</text>
+            <view class='btns'>
+              <button  bindtap='clickBang'>完成</button>
+            </view>
+        </view>
+
+        <view class='btns' wx:if="{{!telphoneDisplay}}">
+            <button bindtap='clickBang' >完成</button>
+        </view>
+        <van-toast id="van-toast" />
+        
+    </scroll-view>
+</page>
+
+
+

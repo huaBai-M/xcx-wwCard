@@ -1,0 +1,12 @@
+<view class='wx_dialog' hidden="{{!isShow}}" catchtouchmove='noneview'>
+  <view class='wx-mask'></view>
+  <view class='wx-dialog-content'>
+    <view class='wx-dialog-title'>微信授权</view>
+    <view class='wx-dialog-contents'>
+     <view class="getUserInfoTitle1">申请获取以下权限：</view> 
+      <view class="getUserInfoTitle2">获得你的公开信息（昵称 , 头像）</view>
+      <button open-type="getUserInfo" bindgetuserinfo='getUserInfoResult' class="btnShou">好的</button>
+    </view>
+  </view>
+</view>
+

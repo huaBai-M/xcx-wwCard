@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "创建名片组",
+    "usingComponents": {
+        "van-dialog": "../../dist/dialog/index",
+        "van-field": "../../dist/field/index",
+        "van-toast": "../../dist/toast/index"
+    }
+}

@@ -1,0 +1,84 @@
+/* pages/common/pop/pop.wxss */
+.wx_dialog {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width:100%;
+  height: 100%;
+  z-index: 9999999999;
+}
+.wx-mask {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .3);
+  z-index: 99;
+}
+.wx-dialog-content {
+  position: absolute;
+  background: #fff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  /* height: 200px; */
+  padding: 10px 0 35px 0;
+  z-index: 100;
+  border-radius: 5px;
+}
+.wx-dialog-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  height: 60px;
+  line-height: 60px;
+  color: #333;
+  border-bottom: 1rpx solid #e7e7e7; 
+}
+.wx-dialog-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  border-top: 1px solid #eee;
+}
+.wx-dialog-btn {
+  display: inline-block;
+  width: 49%;
+  cursor: pointer;
+  text-align: center;
+}
+.wx-dialog-btn:first-child {
+  border-right: 1px solid #eee;
+}
+/* +++ */
+.getUserInfoTitle1 {
+    font-size: 16px;
+    margin-top: 16px;
+    text-align: center;
+    color: #333;
+}
+.getUserInfoTitle2 {
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: center;
+    color: #999;
+}
+.btnShou {
+    background-color: #0868ff;
+    width: 90%;
+    margin-top: 25px;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 16px;
+}
+.btnShou::after {
+    border:none;
+}

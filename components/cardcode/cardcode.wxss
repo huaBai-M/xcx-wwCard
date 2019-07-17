@@ -1,0 +1,34 @@
+@import "/font/iconfont.wxss";
+.erweiCode {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 75px;
+    height: 65px;
+    background: url("https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/aside.png") no-repeat top;
+    background-size: contain;
+    z-index: 9;
+    overflow: hidden;
+}
+.erweiCode .icon-xiaochengxu {
+    font-size: 22px;
+    position: absolute;
+    right: 26px;
+    top: 21px;
+    z-index: 999;
+    color: #006cff;
+}
+.textCode {
+    width:25px;
+    height:65px;
+    color:#333;
+    font-size:13px;
+    float:left;
+    position:absolute;
+    right:-3px;
+    top:3px;
+    padding-top: 2px;
+    box-sizing: border-box;
+}

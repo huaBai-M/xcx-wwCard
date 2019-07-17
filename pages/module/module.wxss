@@ -1,0 +1,75 @@
+/* pages/module/module.wxss */
+page {
+  background-color: #f0f8ff;
+}
+.selected {
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.selected .title {
+  color: #333;
+  font-size:30rpx;
+  font-weight: 700;
+}
+.selected .swiper {
+  margin-top: 15px;
+}
+.selected .swiper .name {
+  color: #333;
+  font-size:28rpx;
+  margin-top: 30rpx;
+}
+.selected .swiper .item {
+  padding: 5px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.selected .swiper image {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+.selected .swiper .blue {
+  border: 2px solid #008ef9;
+}
+.add {
+  margin-top: 10px;
+  width: 110rpx;
+  height: 110rpx;
+  line-height: 110rpx;
+  text-align: center;
+  color: #999;
+  font-size: 40px;
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.paner {
+  color: #666;
+  font-size:30rpx;
+  margin-top: 10px;
+  padding-left: 5px;
+}
+.btns {
+    margin-top: 40rpx;
+}
+.btns .van-button--normal {
+    padding: 0;
+    width: 40%;
+    margin: 0 5%;
+    border-radius: 5px;
+    font-size: 17px;
+}
+.btns .van-button--default {
+    background-color: #bfbfbf;
+    color: #fff;
+}
+.add image {
+  width: 100%;
+  height: 100%;
+}
+swiper {
+  height: 120px;
+}

@@ -1,0 +1,38 @@
+<!--pages/detail/detail.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<page>
+    <view class="pageBody">
+      <!-- 产品列表 -->
+      <view class='proLists'>
+         <view class='list'>
+           <view class='idShow'>
+                <view class='proImg'><image src='{{products.banner}}' mode='widthFix'></image></view>
+                <view class='proMesg'>
+                    <view class='name'>{{products.productName}}</view>
+                    <!-- <view class='num'>今日已有{{products.todayVisitCount==null?'0':products.todayVisitCount}}人查看<image src='https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/icon_popularity.png' mode='widthFix'></image><image src='https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/icon_popularity.png' mode='widthFix'></image></view> -->
+                    <view class='remark'>
+                    <template is="wxParse" data="{{wxParseData:displayImgs.nodes}}"/>
+                    </view>
+                </view>
+           </view>
+         </view>
+      </view>
+
+      <!-- 底部拨打 -->
+      <view class='call'>
+         <!-- <image src='{{message.img}}' mode='widthFix'></image> -->
+          <view class='callImg'>
+          <image src="{{comName.cardImageUrl==null?'https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/head.jpg':comName.cardImageUrl}}" mode='widthFix'></image>
+          </view>
+
+         <view class='text'>
+            <view class='name'>{{comName.name}}</view>
+            <view class='company'>{{comName.company}}</view>
+         </view>
+         <view class='iconfont icon-liuyan' bindtap='toMessage' wx:if="{{stateShouQuan}}"></view>
+         <button wx:if="{{!stateShouQuan}}" open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumbers" class="iconfont icon-liuyan btnMessage"></button>
+         <view  bindtap="phoneCall" class='btn iconfont icon-web-icon-'></view >
+      </view>
+    </view>
+</page>
+

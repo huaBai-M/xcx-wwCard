@@ -1,0 +1,19 @@
+.gratis {
+    margin-top:15rpx;
+    color: #333;
+    font-size: 34rpx;
+}
+.titleTel {
+padding:0rpx 45rpx;
+box-sizing:border-box;
+color:#333;
+font-size:32rpx;
+}
+
+.titleA {
+    color: #333;
+    font-size: 32rpx;
+}
+.titleA>view {
+    margin-top: 10rpx;
+}

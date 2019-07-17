@@ -1,0 +1,6 @@
+<view class='gratis titleTel'>
+  暂无{{text}}，可开通会员使用更多功能。
+  <view class='titleA'>请联系客服热线
+    <text>18811327384</text>
+  </view>
+</view>

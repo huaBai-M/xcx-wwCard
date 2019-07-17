@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "名片样式",
+  "usingComponents": {
+    "cardtop": "/components/cardtop/cardtop",
+    "van-button": "../../dist/button/index",
+    "van-dialog": "../../dist/dialog/index",
+    "van-toast": "../../dist/toast/index"
+  }
+}

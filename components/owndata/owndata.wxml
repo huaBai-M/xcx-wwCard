@@ -1,0 +1,33 @@
+<view class='add-renqi'>
+    <view class='hots'>人气
+        <text>{{cardData.visitNum+1}}</text>
+    </view>
+    <view class='likes'>点赞
+        <text>{{cardData.thumbNum}}</text>
+    </view>
+    <view class='shares'>转发
+        <text>{{cardData.transferNum}}</text>
+    </view>
+</view>
+<view class='operate'>
+    <view class='renqi ope callCode' bindtap='code'>
+        <image src='https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/xcxCode.png' mode='widthFix'></image>
+        <text class='visitNum'>名片码</text>
+    </view>
+    <button class='dianzan ope' open-type="share" plain="true" >
+        <image src='https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/shareFa.png' mode='widthFix'></image>
+        <text>发名片</text>
+    </button>
+    <button class='zhuanfa ope callCode' bindtap='operation'>
+        <image src='https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/AI.png' mode='widthFix'></image>
+        <text>基本操作</text>
+    </button>
+    <button class='zhuanfa ope callCode' bindtap='ai'>
+        <image src='https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/jibenxinxi.png' mode='widthFix'></image>
+        <text>AI</text>
+    </button>
+    <!-- <view class='renqi ope callCode' bindtap='msgUpdate'>
+        <image src='https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/xcxCode.png' mode='widthFix'></image>
+        <text class='visitNum'>修改</text>
+    </view> -->
+</view>

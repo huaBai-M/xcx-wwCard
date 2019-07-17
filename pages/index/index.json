@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "名片",
+  "usingComponents": {
+    "empower": "/components/empower/empower",
+    "sideedge": "/components/sideedge/sideedge",
+    "exchangecard": "/components/exchangecard/exchangecard",
+    "recommend": "/components/recommend/recommend",
+    "gratis": "/components/gratis/gratis",
+    "cardcode": "/components/cardcode/cardcode",
+    "cardtop": "/components/cardtop/cardtop",
+    "owndata": "/components/owndata/owndata",
+    "othersdata": "/components/othersdata/othersdata",
+    "change": "../../components/change/change"
+  }
+}

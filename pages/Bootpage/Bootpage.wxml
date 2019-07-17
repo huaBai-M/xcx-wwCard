@@ -1,0 +1,91 @@
+<view wx:if="{{multipleSlots}}">
+<!-- <van-toast id="van-toast" /> -->
+
+<van-popup show="{{show}}" bind:close="onClose">
+  <view class='experience'>
+    <view class='clear '>
+      <text class='iconfont icon-guanbi' bindtap='onClose'></text>
+    </view>
+    <view class='title'>获得免费体验资格</view>
+    <view class='experience_form'>
+      <text class='error'>*</text>   
+      <text class='label'>姓名：</text>    
+      <input placeholder="输入您的姓名" bindblur='nameTest' data-value='{{applyName}}'  data-type='{{1}}' value='{{applyName}}' />
+    </view>
+    <view class='experience_form'>
+      <text class='error'>*</text>   
+      <text class='label'>电话：</text>    
+      <input placeholder="输入您的电话" maxlength='11' bindblur='nameTest' data-value='{{experiencePhone}}'  data-type='{{22}}' value='{{experiencePhone}}' />
+    </view>
+    <view class='experience_form_abt'>
+       <button class='vanpopup_formAbt' bindtap='submitexperiencePhone'>提交</button>
+    </view> 
+  </view>
+</van-popup>
+ <view class='propagamda_banner'>
+    <swiper 
+      indicator-dots="{{indicatorDots}}" 
+      indicator-color="rgba(255,255,255,0.5)" 
+      indicator-active-color="rgba(255,255,255,1)"
+      autoplay="{{autoplay}}"  
+      interval="{{interval}}"
+      duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="index">
+        <swiper-item>
+          <view class='slide-banner'>
+          <image src="{{item}}" class="slide-image"/>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='swiper_form'>
+      <input placeholder="请输入您的工作手机号" maxlength='11' bindblur='nameTest' data-value='{{wordPhone}}'  data-type='{{11}}' value='{{wordPhone}}' />
+      <button class='proppropaganda_formAbt' bindtap='submitWork'>提交</button>
+    </view>
+ </view>
+ <!-- 2 -->
+ <view class='imgOne'>
+ <image src="https://page-bucket.oiaqye7985.com/wechat/mini-card/propaganda/02-1.jpg" class='imgOne_img' style="height:592rpx"/>
+ <image src="https://page-bucket.oiaqye7985.com/wechat/mini-card/propaganda/02-2.jpg" class='imgOne_img' style="height:673rpx"/>
+ <button class='imgOne_formAbt' bindtap='popup'>免费使用</button>
+ </view>
+ <!-- 3 -->
+  <view class=' imgOne'>
+ <image src="https://page-bucket.oiaqye7985.com/wechat/mini-card/propaganda/03-1.jpg" class='imgOne_img' style="height:510rpx"/>
+ <image src="https://page-bucket.oiaqye7985.com/wechat/mini-card/propaganda/03-2.jpg" class='imgOne_img' style="height:527rpx"/>
+ <button class='imgOne_formAbt' bindtap='popup'>免费使用</button>
+ </view>
+ <!-- 4 -->
+  <view class=' imgOne'>
+ <image src="https://page-bucket.oiaqye7985.com/wechat/mini-card/propaganda/04-1.jpg" class='imgOne_img' style="height:560rpx"/>
+ <image src="https://page-bucket.oiaqye7985.com/wechat/mini-card/propaganda/04-2.jpg" class='imgOne_img' style="height:572rpx"/>
+ <button class='imgOne_formAbt' bindtap='popup'>免费使用</button>
+ </view>
+ <!-- 5 -->
+  <view class=' imgOne'>
+ <image src="https://page-bucket.oiaqye7985.com/wechat/mini-card/propaganda/05.jpg" class='imgOne_img' style="height:560rpx"/>
+ <image src="https://page-bucket.oiaqye7985.com/wechat/mini-card/propaganda/06.jpg" class='imgOne_img' style="height:572rpx"/>
+ </view>
+<view class='propaganda_foot'>
+  <view class='title'>意向申请表</view>
+  <view class='title_p'>请务必认真填写，以便您更短时间内体验生意帮名片</view>
+  <view class='propaganda_form'>
+    <text class='iconfont icon-yonghu'></text>
+    <input placeholder="姓名 (必填)" maxlength='11' bindblur='nameTest' data-value='{{applyName}}'  data-type='{{1}}' value='{{applyName}}'/>
+  </view>
+  <view class='propaganda_form'>
+    <text class='iconfont icon-shouji'></text>
+    <input placeholder="手机 (必填)" maxlength='11' bindblur='nameTest' data-value='{{applyPhone}}'  data-type='{{2}}' value='{{applyPhone}}' />
+  </view>
+  <!-- <view class='propaganda_form propaganda_form_yanzhen'>
+    <input placeholder="请输入验证码" bindblur='nameTest' data-value='{{applyTest}}'  data-type='{{3}}' value='{{applyTest}}' />
+    <button>获取验证码</button>
+  </view> -->
+  <view class='propaganda_formT'>
+    <button class='foot_formAbt' bindtap='submitfoot'>提交</button>
+  </view>
+  <view class='propaganda_foottxt'>
+    信融科技 版权所有 京IPC备 13035649号-2
+  </view>
+</view>
+</view>

@@ -1,0 +1,133 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.7.2",
+	"appid": "wx8219ae22dc9edc3a",
+	"projectname": "%E6%96%B0%E7%89%88%E5%90%8D%E7%89%87",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 9,
+			"list": [
+				{
+					"id": 0,
+					"name": "转发进入",
+					"pathName": "pages/Bootpage/Bootpage",
+					"query": "companyId=-1&wxCardEmployeeId=2943",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "扫码进入",
+					"pathName": "pages/Bootpage/Bootpage",
+					"query": "scene= 31369 A2927",
+					"scene": 1047
+				},
+				{
+					"id": 2,
+					"name": "进入自己的名片",
+					"pathName": "pages/Bootpage/Bootpage",
+					"query": "companyId=31369&wxCardEmployeeId= 2917",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "本地测试",
+					"pathName": "pages/Bootpage/Bootpage",
+					"query": "companyId=9717&wxCardEmployeeId= 9",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "消息进入",
+					"pathName": "pages/Bootpage/Bootpage",
+					"query": "companyId=31369&wxCardEmployeeId=2917&url=\"chart\"",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "AI",
+					"pathName": "pages/AI/AI",
+					"query": "",
+					"scene": 1001
+				},
+				{
+					"id": 6,
+					"name": "AI",
+					"pathName": "pages/AI/AI",
+					"query": "",
+					"scene": 1047
+				},
+				{
+					"id": -1,
+					"name": "operation",
+					"pathName": "pages/operation/operation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "module",
+					"pathName": "pages/module/module",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "ceshi",
+					"pathName": "pages/Bootpage/Bootpage",
+					"query": "",
+					"scene": 1047
+				},
+				{
+					"id": -1,
+					"name": "Gz",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": 1011
+				}
+			]
+		}
+	}
+}

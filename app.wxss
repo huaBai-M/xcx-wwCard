@@ -1,0 +1,17 @@
+@import "/font/iconfont.wxss";
+.swiper .wx-swiper-dot::before {
+    content: '';
+    flex-grow: 1;
+    background: #e5e5e5;
+    border-radius: 12rpx;
+    -webkit-border-radius: 12rpx;
+    -moz-border-radius: 10rxp;
+}
+
+.swiper .wx-swiper-dot-active::before {
+    background: #006cff !important;
+}
+
+.swiper .wx-swiper-dot.wx-swiper-dot-active {
+    width: 30rpx !important;
+}

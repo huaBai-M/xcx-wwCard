@@ -1,0 +1,129 @@
+/* pages/addCallGroup/addCallGroup.wxss */
+page {
+    width: 100%;
+    height: 100%;
+     background-color: #fff;
+}
+.pageBody {
+    width: 100%;
+    min-height: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding-bottom: 50rpx;
+}
+.add-groups {
+    margin-top: 1px;
+    text-align: center;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px 0 0;
+}
+.add-groups image {
+    width: 50px;
+}
+.text-add {
+    color: #666;
+    font-size: 32rpx;
+    margin-top: 7px;
+}
+.details {
+    background-color: #fff;
+    padding: 20px 5%;
+    margin-top: 0rpx;
+}
+.text-name,.text-type {
+    color: #000;
+    font-size: 32rpx;
+     margin: 0 15rpx;
+    margin-bottom: 10rpx;
+    margin-top: 10rpx;
+    
+}
+.calls-name{
+  margin: 0 15rpx;
+}
+.input-name input{
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    border: 1px solid #ccc;
+    border-radius: 10rpx;
+    margin-top: 20rpx;
+    padding-left: 10px;
+    color: #666;
+    font-size: 32rpx;
+    box-sizing: border-box;
+}
+.calls-type {
+ 
+    margin-top: 20rpx;
+}
+.input-type text {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10rpx;
+    color: #666;
+    font-size: 32rpx;
+    margin-right: 0%;
+    width: 20%;
+    height: 70rpx;
+    line-height: 70rpx;
+    text-align: center;
+    margin-top: 20rpx;
+    vertical-align: middle;
+}
+.input-type input {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10rpx;
+    color: #666;
+    font-size: 32rpx;
+    width: 20%;
+    height: 70rpx;
+    line-height: 70rpx;
+    text-align: center;
+    margin-top: 20rpx;
+    vertical-align: middle;
+}
+.btns {
+    margin-top: 40px;
+    
+}
+.btns button {
+    width: 88%;
+    height: 92rpx;
+    line-height: 92rpx;
+    border-radius: 10rpx;
+    background-color: #378bfc;
+    color: #fff;
+    font-size: 34rpx;
+}
+.btns .cancel-btn {
+   margin-top: 20px;
+   background-color: #fff;
+   color: #378bfc;
+   font-size: 30rpx;
+   border: 1px solid #f2f2f2;
+}
+button::after{
+border:none;
+}
+.input-type .actClass{
+  background-color: #378bfc;
+  color: #fff;
+  border-color: #378bfc;
+}
+.van-field__input{
+  height:40px !important;
+  min-height:40px !important;
+}
+.input-type{
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+/* .input-type text:nth-child(3n+3){
+  margin-right:0%;
+
+} */

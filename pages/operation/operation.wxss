@@ -1,0 +1,71 @@
+page {
+  background-color: #f0f8ff;
+
+}
+.imgTop {
+    font-size: 0;
+}
+.imgTop image {
+    width: 100%;
+}
+.pageBody {
+    width: 100%;
+    min-height: 100%;
+    background-color: #f0f8ff;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    padding: 20rpx 3% 70rpx 3%;
+}
+.btns {
+    margin-top: 40rpx;
+}
+.btns .van-button--normal {
+    padding: 0;
+    width: 40%;
+    margin: 0 5%;
+    border-radius: 5px;
+    font-size: 17px;
+}
+.btns .van-button--default {
+    background-color: #bfbfbf;
+    color: #fff;
+}
+.imgTop {
+  width: 94%;
+  height: 140rpx;
+  background: url("https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/qq@3x.png") no-repeat center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  margin-left: 3%;
+  border-radius: 10px;
+}
+.style {
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.styles {
+  color: #fff;
+  font-size: 30rpx;
+  margin-top: 3px;
+}
+.left-top {
+  padding-left: 40rpx;
+  width: 60%;
+}
+.left-top text {
+  margin-left: 5px;
+}
+.right-top {
+  width: 40%;
+  text-align: right;
+  box-sizing: border-box;
+  padding-right: 10px;
+}
+.right-top .iconfont {
+  color: #fff;
+  font-size: 26px;
+}

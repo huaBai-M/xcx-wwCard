@@ -1,0 +1,3 @@
+<web-view src="{{url}}"></web-view>
+<!-- <web-view src="http://192.168.1.103:8080/syb/mobiledataAnalysisController/getBusinessCardByXcc?xcxOpenId=oHHwo49jIhWRKj5p8nD9ggcJOoDY"></web-view> -->
+<!-- <button class='aihref_abt'>按钮</button> -->

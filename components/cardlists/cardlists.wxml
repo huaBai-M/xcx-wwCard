@@ -1,0 +1,282 @@
+<!--pages/callLists/callLists.wxml-->
+<view class="pageBody">
+  <view class='list' wx:for='{{cardData}}' wx:key="{{ index }}">
+    <view class='date'>
+      <text>{{item.visitTime}}</text> 来自
+      <text wx:if="{{item.source==0}}">转发</text>
+      <text wx:if="{{item.source==3||item.source==null}}">搜索</text>
+      <text wx:if="{{item.source==1}}">扫码</text>
+      <text wx:if="{{item.source==2}}">扫码</text>
+    </view>
+    <!-- id=1 -->
+    <view wx:if="{{item.wxCardStyleId==null}}">
+        <view class='con1' data-card="{{item}}" bindtap='clickCard'>
+      <view class="content content0">
+
+        <view class='leftContent'>
+          <view class='name'>{{item.emplyName==null?'':item.emplyName}}
+            <text class='job'>{{item.title==null?'':item.title}}</text>
+          </view>
+          <view class='line'></view>
+        </view>
+        <view class='rightContent'>
+          <image src="{{item.headImageUrl==null||item.headImageUrl=='string'?'https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/head.jpg':item.headImageUrl}}" mode='widthFix'></image>
+        </view>
+        <view class='leftBottomContent'>
+          <view class='tel'>
+            <text class='iconfont icon-web-icon-'></text>{{item.telphone==null?'':item.telphone}}</view>
+          <view class='mail'>
+            <text class='iconfont icon-youxiang'></text>{{item.email==null?'':item.email}}</view>
+          <view class='company' wx:if="{{item.company!=null && item.company!=''}}">
+            <text class='iconfont icon-gongsimingcheng'></text>{{item.company==null?'':item.company}}</view>
+        </view>
+        <view class='rightBottomContent'>
+          <image src="{{companyData.companyLogo}}" mode='widthFix'></image>
+        </view>
+        <view class='Shield' wx:if="{{item.status==-1}}">
+          此名片已屏蔽
+        </view>
+      </view>
+
+    </view>
+    </view>
+    <!-- id=1 -->
+    <view wx:if="{{item.wxCardStyleId!=null&&item.wxCardStyleId==1}}">
+        <view class='con1' data-card="{{item}}" bindtap='clickCard'>
+      <view class="content content0">
+
+        <view class='leftContent'>
+          <view class='name'>{{item.emplyName==null?'':item.emplyName}}
+            <text class='job'>{{item.title==null?'':item.title}}</text>
+          </view>
+          <view class='line'></view>
+        </view>
+        <view class='rightContent'>
+          <image src="{{item.headImageUrl==null||item.headImageUrl=='string'?'https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/head.jpg':item.headImageUrl}}" mode='widthFix'></image>
+        </view>
+        <view class='leftBottomContent'>
+          <view class='tel'>
+            <text class='iconfont icon-web-icon-'></text>{{item.telphone==null?'':item.telphone}}</view>
+          <view class='mail'>
+            <text class='iconfont icon-youxiang'></text>{{item.email==null?'':item.email}}</view>
+          <view class='company' wx:if="{{item.company!=null && item.company!=''}}">
+            <text class='iconfont icon-gongsimingcheng'></text>{{item.company==null?'':item.company}}</view>
+        </view>
+        <view class='rightBottomContent'>
+          <image src="{{companyData.companyLogo}}" mode='widthFix'></image>
+        </view>
+        <view class='Shield' wx:if="{{item.status==-1}}">
+          此名片已屏蔽
+        </view>
+      </view>
+
+    </view>
+    </view>
+    <!-- id=2 -->
+    <view wx:if="{{item.wxCardStyleId!=null&&item.wxCardStyleId==2}}">
+        <view class='con1' data-card="{{item}}" bindtap='clickCard'>
+      <view class="content content2">
+        <view class='leftContent'>
+          <view class='name'>{{item.emplyName==null?'':item.emplyName}}
+            <text class='job'>{{item.title==null?'':item.title}}</text>
+          </view>
+        </view>
+        <view class='leftBottomContent'>
+          <view class='tel'>
+            <text class='iconfont icon-web-icon-'></text>{{item.telphone==null?'':item.telphone}}</view>
+          <view class='mail' wx:if="{{item.email!=null && item.email!=''}}">
+            <text class='iconfont icon-youxiang'></text>{{item.email==null?'':item.email}}</view>
+          <view class='company' wx:if="{{item.company!=null && item.company!=''}}">
+            <text class='iconfont icon-tubiao-'></text>{{item.company==null?'':item.company}}</view>
+        </view>
+        <view class='rightBottomContent'>
+          <image src="{{companyData.companyLogo}}" mode='widthFix'></image>
+        </view>
+        <view class='Shield' wx:if="{{item.status==-1}}">
+          此名片已屏蔽
+        </view>
+      </view>
+    </view>
+    </view>
+    <!-- id=3 -->
+    <view wx:if="{{item.wxCardStyleId!=null&&item.wxCardStyleId==3}}">
+        <view class='con1' data-card="{{item}}" bindtap='clickCard'>
+      <view class="content content1">
+        <view class='leftContent'>
+          <image src="{{item.headImageUrl==null||item.headImageUrl=='string'?'https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/head.jpg':item.headImageUrl}}" mode='widthFix'></image>
+        </view>
+        <view class='midContent'>
+          <view class='name'>{{item.emplyName==null?'':item.emplyName}}
+            <text class='job'>{{item.title==null?'':item.title}}</text>                                                                                             
+          </view>
+        </view>
+        <view class='rightContent'>
+           <image src="{{companyData.companyLogo}}" mode='widthFix'></image>
+        </view>
+        <view class='leftBottomContent'>
+          <view class='iconfont icon-web-icon-' wx:if="{{item.telphone!=null && item.telphone!=''}}"></view>
+          <view class='iconfont icon-youxiang' wx:if="{{item.email!=null && item.email!=''}}"></view>
+          <view class='iconfont icon-tubiao-' wx:if="{{item.company!=null && item.company!=''}}"></view>
+        </view>
+        <view class='rightBottomContent'>
+          <view class='tel' wx:if="{{item.telphone!=null && item.telphone!=''}}">
+          {{item.telphone==null?'':item.telphone}}</view>
+          <view class='mail' wx:if="{{item.email!=null && item.email!=''}}">
+            {{item.email==null?'':item.email}}</view>
+          <view class='company' wx:if="{{item.company!=null && item.company!=''}}">
+            {{item.company==null?'':item.company}}</view>
+        </view>
+       
+        <view class='Shield' wx:if="{{item.status==-1}}">
+          此名片已屏蔽
+        </view>
+      </view>
+ </view>
+    </view>
+    <!-- id=4 -->
+    <view wx:if="{{item.wxCardStyleId!=null&&item.wxCardStyleId==4}}">
+        <view class='con1' data-card="{{item}}" bindtap='clickCard'>
+      <view class="content content3">
+        <view class='rightBottomContent'>
+          <image src="{{companyData.companyLogo}}" mode='widthFix'></image>
+        </view>
+        <view class='rightContent'>
+          <image src="{{item.headImageUrl==null||item.headImageUrl=='string'?'https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/head.jpg':item.headImageUrl}}" mode='widthFix'></image>
+        </view>
+        <view class='leftContent'>
+          <view class='name'>{{item.emplyName==null?'':item.emplyName}}
+            <text class='job'>{{item.title==null?'':item.title}}</text>
+          </view>
+        </view>
+        
+        <view class='leftBottomContent'>
+          <view class='tel'>
+            <text class='iconfont icon-web-icon-'></text>{{item.telphone==null?'':item.telphone}}</view>
+          <view class='mail' wx:if="{{item.email!=null && item.email!=''}}">
+            <text class='iconfont icon-youxiang'></text>{{item.email==null?'':item.email}}</view>
+          <view class='company' wx:if="{{item.company!=null && item.company!=''}}">
+            <text class='iconfont icon-tubiao-'></text>{{item.company==null?'':item.company}}</view>
+
+        </view>
+        <view class='Shield' wx:if="{{item.status==-1}}">
+          此名片已屏蔽
+        </view>
+      </view>
+
+    </view>
+    </view>
+    <!-- id=5 -->
+    <view wx:if="{{item.wxCardStyleId!=null&&item.wxCardStyleId==5}}">
+        <view class='con1' data-card="{{item}}" bindtap='clickCard'>
+        <view class="content content4">
+            <view class='leftContent'>
+              <view class='name'>{{item.emplyName==null?'':item.emplyName}}
+                <text class='job'>{{item.title==null?'':item.title}}</text>
+              </view>
+              <view class='line'></view>
+            </view>
+            <view class='rightBottomContent'>
+              <image src="{{item.companyLogo}}" mode='widthFix'></image>
+            </view>
+            <view class='leftBottomContent'>
+              <view class='tel'>
+                <text class='iconfont icon-web-icon-'></text>{{item.telphone==null?'':item.telphone}}</view>
+              <view class='mail' wx:if="{{item.email!=null && item.email!=''}}">
+                <text class='iconfont icon-youxiang'></text>{{item.email==null?'':item.email}}</view>
+              <view class='company' wx:if="{{item.company!=null && cardData.company!=''}}">
+                <text class='iconfont icon-tubiao-'></text>{{item.company==null?'':item.company}}</view>
+          </view>
+        <view class='Shield' wx:if="{{item.status==-1}}">
+          此名片已屏蔽
+        </view>
+      </view>
+
+    </view>
+    </view>
+    <!-- id=6 -->
+    <view wx:if="{{item.wxCardStyleId!=null&&item.wxCardStyleId==6}}">
+        <view class='con1' data-card="{{item}}" bindtap='clickCard'>
+     <view class="content content6">
+        <view class='rightBottomContent'>
+          <image src="{{companyData.companyLogo}}" mode='widthFix'></image>
+        </view>
+        <view class='leftContent'>
+          <view class='name'>{{item.emplyName==null?'':item.emplyName}}
+            <text class='job'>{{item.title==null?'':item.title}}</text>
+          </view>
+        </view>
+        <view class='rightContent'>
+          <image src="{{item.headImageUrl==null||item.headImageUrl=='string'?'https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/head.jpg':item.headImageUrl}}" mode='widthFix'></image>
+        </view>
+        <view class='leftBottomContent'>
+          <view class='tel'>
+            <text class='iconfont icon-web-icon-'></text>{{item.telphone==null?'':item.telphone}}</view>
+          <view class='mail' wx:if="{{item.email!=null && item.email!=''}}">
+            <text class='iconfont icon-youxiang'></text>{{item.email==null?'':item.email}}</view>
+          <view class='company' wx:if="{{item.company!=null && item.company!=''}}">
+            <text class='iconfont icon-tubiao-'></text>{{item.company==null?'':item.company}}</view>
+        </view>
+        <view class='Shield' wx:if="{{item.status==-1}}">
+          此名片已屏蔽
+        </view>
+      </view>
+
+    </view>
+    </view>
+    <!-- id=7 -->
+    <view wx:if="{{item.wxCardStyleId!=null&&item.wxCardStyleId==7}}">
+        <view class='con1' data-card="{{item}}" bindtap='clickCard'>
+      <view class="content content5">
+        <view class='leftContent'>
+          <view class='name'>{{item.emplyName==null?'':item.emplyName}}
+            <text class='job'>{{item.title==null?'':item.title}}</text>
+          </view>
+        </view>
+        <view class='rightContent'>
+          <image src="{{item.headImageUrl==null||item.headImageUrl=='string'?'https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/head.jpg':item.headImageUrl}}" mode='widthFix'></image>
+        </view>
+        <view class='leftBottomContent'>
+          <view class='tel'>
+            <text class='iconfont icon-web-icon-'></text>{{item.telphone==null?'':item.telphone}}</view>
+          <view class='mail' wx:if="{{item.email!=null && item.email!=''}}">
+            <text class='iconfont icon-youxiang'></text>{{item.email==null?'':item.email}}</view>
+          <view class='company' wx:if="{{item.company!=null && item.company!=''}}">
+            <text class='iconfont icon-tubiao-'></text>{{item.company==null?'':item.company}}</view>
+        </view>
+        <view class='rightBottomContent'>
+          <image src="{{companyData.companyLogo}}" mode='widthFix'></image>
+        </view>
+        <view class='Shield' wx:if="{{item.status==-1}}">
+          此名片已屏蔽
+        </view>
+      </view>
+
+    </view>
+    </view>
+    <view class='btns'>
+
+      <button class='shareBtn' wx:if="{{item.status==0}}" open-type="share" data-card="{{item}}">
+        <text class='iconfont icon-fenxiang'></text>分享
+      </button>
+
+      <view class='delete' wx:if="{{item.status==0}}"data-card="{{item}}"bindtap='deleteCall'>
+        <text class='iconfont icon-icon_del'></text>屏蔽
+      </view>
+
+      <view class='delete' wx:if="{{item.status==-1}}" bindtap='openCardPage' data-card="{{item}}">
+         开启
+      </view>
+
+      <view class='delete' bindtap='grouping' data-card="{{item}}" wx:if="{{item.groupName==null&&item.status!=-1}}">
+        <text class='iconfont icon-fenzutongji'></text> 分组
+      </view>
+      <view class='delete' wx:if="{{item.status!=-1&&item.groupName!=null&&start}}">
+        {{ item.groupName}}
+      </view>
+      <view class='delete' wx:if="{{!start}}" data-card="{{item}}" bindtap='rmGroup'>
+        <text class='iconfont icon-jian'></text> 移出
+      </view>
+    </view>
+
+  </view>
+</view>

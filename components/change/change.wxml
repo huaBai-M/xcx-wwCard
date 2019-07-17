@@ -1,0 +1,26 @@
+<!--components/change/change.wxml-->
+<view class='change ' wx:if="{{changeShow}}">
+<!-- <image src="https://page-bucket.oiaqye7985.com/wechat/mini-card/nav@2x.png" mode='widthFix' class='changeBottomImg' wx:if="{{showCom}}"></image> -->
+    <!-- <van-popup show="{{ showCom }}" custom-class="changeClass" z-index="9999" duration="500"> -->
+    <view class="changeClass">
+        <view class='content-change'>
+            <view class='img-top'>
+                <image src='{{cardData.cardImageUrl}}' mode='widthFix'></image>
+                <view class='img-text'>
+                    <view class='name'>{{cardData.name}}<text wx:if="{{cardData.title}}">{{cardData.title}}</text></view>
+                    <view class='phone'>{{cardData.telphone}}</view>
+                </view>
+            </view>
+            <form bindsubmit="formSubmit" report-submit="true"  >
+            <button open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumberH" class='changeBtn'>交换手机号</button>
+             </form>
+            <view class='see-text' bindtap='onSeeClose'>
+                <form bindsubmit="formSubmit" report-submit="true" class="inputRoomAbtT1" >
+        <button form-type="submit"  bindtap='calling'  class='back'><text class='iconfont icon-jinru-copy'></text>  看看再说></button>
+      </form>
+            </view>
+        </view>
+    </view>
+    <!-- </van-popup> -->
+    
+</view>

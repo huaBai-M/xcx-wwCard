@@ -1,0 +1,33 @@
+<!--pages/callGroup/callGroup.wxml-->
+<view class='BgClass' wx:if="{{hideSet}}" bindtap='BgClassFun'></view>
+    <view class="pageBody">
+      <view class='groups' >
+          <view class='left-groups'>
+              <groupimg img="{{grounpData.relations}}" id="groupimg"></groupimg>              
+          </view>
+          <view class='mid-groups'>
+              <view class='mid-name'>{{grounpData.groupName}}({{grounpData.relations.length}})</view>
+              <view class='mid-type'>{{grounpData.groupType}}</view>
+          </view>
+          <view class='right-groups iconfont icon-shezhi ' bindtap='hideSetFun'></view>
+      </view>
+      <view wx:if="{{hideSet}}">
+          <view class='hideSet'>
+              <view class='updateSite' bindtap='modify'><text class='iconfont icon-bianji'></text>更改设置</view>
+              <view class='deleteSite' bindtap='deleteGro'><text class='iconfont icon-shanchu'></text>删除组</view>
+          </view>
+          <text class='sanjiao'></text>
+      </view>
+      <view class='bottom-content'>
+          <view class='search' wx:if="{{cardData.length!=0}}">
+                <view class='left-search' wx:if="{{timeShow}}" bindtap='topQuery'>时间 <text class='iconfont icon-jiantoushang'></text></view>
+                <view class='left-search' wx:if="{{!timeShow}}" bindtap='downQuery'>时间 <text class='iconfont icon-jiantouxia'></text></view>
+                <view class='right-search'>
+                  <input type='text' class='input-search' bindblur='cardName' data-value='{{cardNameVal}}' value="{{cardNameVal}}"></input>
+                  <view class='text-search' bindtap='search'>搜索</view>
+                </view>
+          </view>
+      </view>
+      <cardlists id="cardlists"  data="{{grounpData.relations}}" start="{{false}}" bind:mycardvent="onRefresh" bind:mygrouping="onGrouping"></cardlists>
+      <van-dialog id="van-dialog" />
+</view>

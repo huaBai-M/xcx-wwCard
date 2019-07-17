@@ -1,0 +1,3 @@
+<view style='width:100rpx;height:100rpx;'>
+<painter  palette="{{template}}" url="{{img1}}" bind:imgOK="onImgOK" />
+</view>

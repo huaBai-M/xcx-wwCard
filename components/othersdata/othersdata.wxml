@@ -1,0 +1,71 @@
+<view class='operate'>
+    <view class='renqi ope' style="padding-top:3rpx;">
+        <image hidden='{{renqi}}' src='https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/icon_popularity_gray.png' mode='widthFix'></image>
+        <image hidden='{{!renqi}}' src='https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/icon_popularity.png' mode='widthFix'></image>
+        <text class='visitNum'>{{cardData.visitNum }}</text>
+    </view>
+    <button class='dianzan ope' bindtap='clickDianzan' style='background: none;'  disabled='{{abtdisabled}}'>
+        <image hidden='{{!dianzan}}' src='https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/icon_likey_gray.png' mode='widthFix'></image>
+        <image hidden='{{dianzan}}' src='https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/icon_like.png' mode='widthFix'></image>
+        <text>点赞</text>
+    </button>
+    <button class='zhuanfa ope'  open-type="share" plain="true">
+        <image hidden='{{!zhuanfa}}' src='https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/icon_forwardy_gray.png' mode='widthFix'></image>
+        <image hidden='{{zhuanfa}}' src='https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/icon_forward.png' mode='widthFix'></image>
+        <text>转发</text>
+    </button>
+</view>
+ <!-- 展开全部名片信息 -->
+<view class="callMessagebox">
+  <view class="callMessage {{!trueOrFalse?'callMessageradius':''}}" >
+    <view class='title'>
+        <view class='text-zhankai' bindtap='showHide'>
+            {{trueOrFalse?"展开":"收起"}}
+            全部名片信息
+            <text class='iconfont icon-xiajiantou' hidden="{{!trueOrFalse}}"></text>
+            <text class='iconfont icon-____-' hidden="{{trueOrFalse}}"></text>
+        </view>
+    </view>
+  </view>
+    <view class='erweiCode' bindtap='erweimaAdd'>
+      <text class='iconfont icon-xiaochengxu'></text>
+      <view class='textCode'>名片码</view>
+  </view>
+</view>
+  <!--  -->
+  <view class="addContent " hidden="{{trueOrFalse}}">
+    <view class="hideMessage {{trueOrFalse? 'addWhite' : '' }}">
+        <view class='mesg tel'>
+            <text class='iconfont icon-shouji'></text>
+            <text class='text'>手机</text>
+            <text class='item'>{{cardData.telphone}}</text>
+            <text class='btn' data-type="1" data-value="{{cardData.telphone}}" bindtap='telerPhone'>拨打</text>
+        </view>
+        <view class='mesg weixin' wx:if="{{cardData.wechat!=null && cardData.wechat!=''}}">
+            <text class='iconfont icon-weixin'></text>
+            <text class='text'>微信</text>
+            <text class='item'>{{cardData.wechat}}</text>
+            <text class='btn' data-value="{{cardData.wechat}}" data-type="0" bindtap='copy'>复制</text>
+        </view>
+        <view class='mesg mail' wx:if="{{cardData.email!=null && cardData.email!=''}}">
+            <text class='iconfont icon-youxiang1'></text>
+            <text class='text'>邮箱</text>
+            <text class='item'>{{cardData.email}}</text>
+            <text class='btn' data-value="{{cardData.email}}" data-type="5" bindtap='copy'>复制</text>
+        </view>
+        <view class='mesg add' wx:if="{{cardData.companyLocation!=null && cardData.companyLocation!=''}}">
+            <text class='iconfont icon-dizhi'></text>
+            <text class='text'>地址</text>
+            <text class='item'>{{cardData.companyLocation}}</text>
+            <text class='btn' data-type="5" data-value="{{cardData.companyLocation}}" bindtap='copy'>复制</text>
+        </view>
+    </view>
+  </view>
+
+<!-- 按钮 -->
+<view class='btns'>
+    <button class='change' bindtap='onShowChange' wx:if="{{stateShouQuan}}">交换手机号</button>
+    <button open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber" class='change' wx:if="{{!stateShouQuan}}">交换手机号
+    </button>
+    <button class='synchro' bindtap='phoneOpen'>存入通讯录</button>
+</view>

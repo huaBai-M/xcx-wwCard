@@ -1,0 +1,44 @@
+<!--pages/addCallGroup/addCallGroup.wxml-->
+<page>
+<pop id='dialog'></pop>
+    <view class="pageBody">
+        <view class='add-groups'>
+            <view class='img-add' bindtap='addCall'><image src='/images/add.jpg' mode='widthFix'></image></view>
+            <view class='text-add' wx:if="{{modifyData.groupId==undefined}}">创建名片组</view>
+            <view class='text-add' wx:if="{{modifyData.groupId!=undefined}}">修改名片组</view>
+        </view>
+        <view class='details'>
+            <view class='calls-name'>
+               <view class='text-name' style='margin:0'>名片组名称</view>
+               <view class='input-name'><input type='text' maxlength='8'  placeholder='2-8个字符 如同事组' placeholder-style="font-size:14px;color:#999;" bindinput ="userNameInput" value='{{groupName}}'></input></view>
+            </view>
+            <view class='calls-type'>
+               <view class='text-type'>选择名片组类型</view>
+               <view class='input-type'>
+                  <text wx:for="{{types}}"class="{{num==index?'actClass':''}}" wx:key="{{index}}" data-type-name="{{item.name}}" data-type-index="{{item.id}}" data-type-i="{{index}}" bindtap='selectedType'>{{item.name}}</text>
+                  <text bindtap='showIf'>自定义</text>
+               </view>
+            </view>
+        </view>
+        <view class='btns'>
+            <button class='add-btn' bindtap='confirmAdd' wx:if="{{type=='1'}}">确认创建</button>
+            <button class='add-btn' bindtap='editGroup'  wx:if="{{type=='0'}}">确认修改</button>
+            <button class='cancel-btn' bindtap='cancel'>取消</button>
+        </view>
+        <van-dialog id="van-dialog" />
+        <van-dialog
+            use-slot
+            async-close
+            show="{{ show }}"
+            show-cancel-button
+            bind:close="onClose"
+          >
+          <van-field
+            value="{{ username }}"
+            bind:change="usernameFun"
+            placeholder="请输入自定义组类型名"
+          />
+          </van-dialog>
+          <van-toast id="van-toast" />
+    </view>
+</page>

@@ -1,0 +1,36 @@
+<!-- 轮播图  -->
+<view class='swipers' id='swipersBox' wx:if="{{productBanner.length}}">
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="500" circular="true" previous-margin='20px' next-margin='20px'>
+    <block wx:for="{{productBanner}}" wx:key="index">
+      <swiper-item>
+        <image src='{{item}}' class='img'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class='pro-all'>
+  <view class='list' wx:for="{{products}}" wx:key="{{ index }}" data-id='{{item.id}}' data-html='{{item}}' bindtap='clickPro'>
+    <view class='proImg'>
+      <image src='{{item.banner}}' mode='widthFix'></image>
+    </view>
+    <view class='proMesg'>
+      <view class='name'>{{item.productName}}</view>
+      <view class='remark'>{{item.html==null?'':item.html}}</view>
+      <view class='num'>已有{{item.todayVisitCount==null?0:item.todayVisitCount}}人查看
+        <image src='https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/icon_popularity.png' mode='widthFix'></image>
+        <image src='https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/icon_popularity.png' mode='widthFix'></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+  <van-toast id="van-toast" />
+<view wx:if="{{companyInfo==null&&products.length==0}}">
+  <view class='productNull'>
+  <image src='https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/icon1@2x.png' mode='widthFix'></image>
+  <view class='proN'>暂无产品</view>
+  </view>
+</view>
+ <sideedge wx:if="{{visitorInfo.bindWxCardEmployeeId!=cardInfo.id}}"></sideedge>
+<gratis wx:if="{{cardInfo.registState!=1&&visitorInfo.bindWxCardEmployeeId==cardInfo.id}}" text="{{'产品'}}"></gratis>

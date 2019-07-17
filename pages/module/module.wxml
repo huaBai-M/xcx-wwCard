@@ -1,0 +1,33 @@
+<!--pages/module/module.wxml-->
+<!-- 模版 -->
+  <cardtop id="cardtop" molId="{{molId}}" headImg="{{headImg}}"></cardtop>
+  <view class="selected">
+    <view class="title">选择模板</view>
+    <view class="swiper">
+        <swiper class="swiper" interval="5000" duration="500" next-margin='40px' display-multiple-items ='3'>
+          <block wx:for="{{mols}}" wx:key="index">
+            <swiper-item>
+              <view data-ids="{{index}}" bindtap="selected" class="item">
+              <image src='{{item.imgDisplay}}' class="img {{num==index?'blue':''}}" mode="widthFix"></image>
+              <view class="name">{{item.name}}</view>
+              </view>
+            </swiper-item>
+          </block>
+         </swiper>
+    </view>
+    <view class="hide" hidden="{{molId==2 || molId ==5}}">
+      <view class="title">头像</view>
+      <view class="add iconfont icon-jia" bindtap='changeAvatar' wx:if="{{headImgSate}}"></view>
+      <view class="add" bindtap='changeAvatar' wx:if="{{!headImgSate}}"><image mode="widthFix" src="{{headImg}}"></image></view>
+      <view class="paner">形象照</view>
+    </view>
+    
+  </view>
+
+  <view class='btns'>
+    <van-button type="default" bindtap='concel'>取消</van-button>
+    <van-button type="info" bindtap='confirm'>保存</van-button>
+</view>
+
+<van-dialog id="van-dialog" />
+<van-toast id="van-toast" />

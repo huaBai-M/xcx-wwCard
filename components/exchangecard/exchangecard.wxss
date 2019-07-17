@@ -1,0 +1,117 @@
+@import "/font/iconfont.wxss";
+.tankuang{
+  overflow: hidden;
+}
+.contentChange {
+    width: 95%;
+    margin: auto;
+    position: relative;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding-top: 30rpx;
+    padding-bottom: 60rpx;
+    overflow: hidden;
+}
+
+.imgHead {
+    margin-top: 30rpx;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50rpx;
+    justify-content: space-between;
+}
+.imgHead .leftImg{
+    width: 150rpx;
+    height: 150rpx;
+    overflow: hidden;
+    border-radius: 20000rpx;
+}
+.imgHead .rightImg{
+    width: 150rpx;
+    height: 150rpx;
+    overflow: hidden;
+    border-radius: 20000rpx;
+}
+.imgHead image {
+   width: 100%;
+   /* min-height:200rpx; */
+}
+
+.imgHead .iconfont {
+    margin: 0 60rpx;
+    font-size: 60rpx;
+    color: #055dff;
+}
+
+.custom-class {
+    padding: 30rpx;
+}
+
+.leftImg {
+    margin-left: 50rpx;
+}
+
+.rightImg {
+    margin-right: 50rpx;
+}
+
+.rightClose {
+    display: block;
+    text-align: right;
+    padding-right: 50rpx;
+    font-size: 34rpx;
+    color: #999;
+}
+
+.contentMesg {
+    margin-top: 60rpx;
+    width: 82%;
+    margin: 0 auto;
+}
+
+.contentMesg .msgC {
+    width:700rpx;
+    height: 100rpx;
+    border-bottom: 1rpx solid #e7e7e7;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.contentMesg .msgC label {
+    width: 160rpx;
+    font-size: 36rpx;
+    color: #555;
+}
+
+.contentMesg .msgC input {
+    /* width: 70%; */
+    color: #333;
+    font-size: 36rpx;
+}
+
+.contentMesg .str {
+    color: #ff2626;
+    position: absolute;
+    left: -25rpx;
+    top: 35rpx;
+}
+
+.btnChange {
+    margin-top: 60rpx;
+    text-align: center;
+}
+
+.btnChange button {
+    width: 70%;
+    display: inline-block;
+    background-color: #006cff;
+    color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 0 20rpx #006cff;
+}
+
+.btnChange button::after {
+    border: none;
+}

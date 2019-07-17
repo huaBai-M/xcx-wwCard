@@ -1,0 +1,68 @@
+ <view class='top-head' wx:if="{{basicData.wxCardStyleId==1 || basicData.wxCardStyleId==3 || basicData.wxCardStyleId==4 || basicData.wxCardStyleId==6 || basicData.wxCardStyleId==7 || basicData.wxCardStyleId==null}}">
+    <view class='headLeft'>
+      <view class='img-head'>
+        <image src='{{basicData.headImageUrl}}' mode='widthFix'></image>
+      </view>
+    </view>
+    <view class='btn-change' bindtap='changeAvatar'>点击更换您的头像</view>
+  </view>
+
+  <view class='input-content'>
+
+    <van-cell-group>
+      <van-field label="姓名" value="{{basicData.name }}" bind:blur="bindInput" data-type="name" placeholder="微信昵称" border="{{ true }}" style="text-align:left" />
+    </van-cell-group>
+    <van-cell-group>
+      <van-field label="登录手机号" value="{{basicData.telphone }}"bind:blur="bindInput"  data-type="telphone" disabled="{{true}}" border="{{ true }}"  style="text-align:left"/>
+    </van-cell-group>
+    <!-- <van-cell-group class="displayPhone">
+      <van-field label="展示手机号" value="{{basicData.telphoneDisplay }}"bind:blur="bindInput"  data-type="telphone" disabled="{{true}}" border="{{ true }}"  style="text-align:left;width:100%"/>
+       <view class='change' bindtap='changePhone'>变更</view>
+    </van-cell-group> -->
+    <view class='khName'>
+      <van-cell-group>
+        <van-field label="公司名称" value="{{basicData.company }}" bind:change="onChangeCompany" placeholder="输入公司名称（必填）" border="{{ true }}"style="text-align:left" />
+
+        <!--  -->
+                <view class='history' wx:if="{{history}}">
+                    <view class='lists'>
+                        <view class='list' wx:for="{{listsName}}" wx:key="index" data-company-index='{{index}}' data-company-name='{{item.companyName}}' bindtap='clickName'>{{item.companyName}}</view>
+                    </view>
+                    <view class='listClose' bindtap='closeTitle'>关闭</view>
+                </view>
+        <!--  -->
+      </van-cell-group>
+    </view>
+    <van-cell-group>
+      <picker value="{{index}}" bindchange="bindPickerChange" range="{{array}}" range-key="{{'text'}}">
+        <view class="picker">
+          <view class='label'>公司行业</view>
+          <view class='region'>
+            <input type='text' value='{{basicData.trade}}' placeholder="输入公司行业（必填）" placeholder-style="color:#333" disabled='{{true}}'></input>
+          </view>
+          <van-icon name="arrow" />
+        </view>
+      </picker>
+    </van-cell-group>
+    <van-cell-group>
+      <van-field label="邮箱地址" style="text-align:left" bind:blur="bindInput" data-type="email" value="{{ basicData.email }}" placeholder="输入邮箱地址（选填）" border="{{ true }}"  />
+    </van-cell-group>
+    <van-cell-group>
+      <van-field label="客户职位" style="text-align:left" bind:blur="bindInput" data-type="title" value="{{ basicData.title }}" placeholder="输入客户职位（选填）" border="{{ true }}"/>
+    </van-cell-group>
+    <van-cell-group>
+      <van-field label="微信" style="text-align:left" bind:blur="bindInput" data-type="wechat" value="{{ basicData.wechat }}" placeholder="输入微信（选填）" border="{{ true }}" />
+    </van-cell-group>
+    <van-cell-group>
+      <picker mode="region" value="{{basicData.area}}" custom-item="{{customItem}}" bindchange="bindRegionChange">
+        <view class="picker">
+          <view class='label'>所在区域</view>
+          <view class='region'>{{basicData.area[0]}}-{{basicData.area[1]}}-{{basicData.area[2]}}</view>
+          <van-icon name="arrow" />
+        </view>
+      </picker>
+    </van-cell-group>
+    <van-cell-group>
+      <van-field label="详细地址" data-type="companyLocation" bind:blur="bindInput"  style="text-align:left" value="{{ basicData.companyLocation }}" placeholder="输入详细地址" border="{{ true }}"  />
+    </van-cell-group>
+  </view>

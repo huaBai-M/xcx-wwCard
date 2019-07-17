@@ -1,0 +1,586 @@
+/* pages/callLists/callLists.wxss */
+@import "../../font/iconfont.wxss";
+page {
+    width: 100%;
+    height: 100%;
+}
+whole{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.pageBody {
+    width: 100%;
+    min-height: 100%;
+    background-color: #ecf7ff;
+    padding: 0 4%;
+    box-sizing: border-box;
+    padding-bottom: 50rpx;
+}
+.pageBody button {
+ padding: 0;
+}
+.list {
+    width: 100%;
+    /* border-bottom: 1rpx solid #e7e7e7; */
+    padding:6rpx 0 30rpx 0;
+}
+
+.list:last-child {
+    border-bottom: none;
+}
+.date {
+    color: #666;
+    font-size: 28rpx;
+    padding-left: 10rpx;
+}
+.content {
+    width: 100%;
+    border-radius: 30rpx;
+    background: url(https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/bg_card_list_01.png) no-repeat center;
+    background-size: cover;
+    margin-top: 28rpx;
+    padding: 75rpx 50rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    height: 410rpx;
+    overflow: hidden;
+    box-shadow: 0 0 20rpx #d2e6ff;
+    position: relative;
+}
+.Shield{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 410rpx;
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: #fff;
+  background: rgba(73, 62, 62, 0.5)
+}
+.content .leftContent {
+    width: 70%;
+    text-align: left;
+}
+.content .name {
+    font-size: 34rpx;
+    color: #fff;
+    font-weight: 700;
+}
+.content .job{
+    font-size: 28rpx;
+    font-weight: 400;
+    margin-left: 10rpx;
+}
+.content .company {
+    font-size: 28rpx;
+    color: #fff;
+    margin-top: 15rpx;
+    height: 20px;
+    /* overflow: hidden; */
+}
+.content .line {
+    width: 65rpx;
+    height: 6rpx;
+    background-color: #c5e8fd;
+    margin-top: 40rpx;
+}
+.content .rightContent {
+    width:120rpx;
+    height:120rpx;
+    border-radius: 100%;
+    border: 2px solid #008ef9;
+    overflow: hidden;
+    text-align: right;
+    margin-left: 20px;
+}
+.content .rightContent image {
+    width: 100%;
+    min-height: 120rpx;
+}
+.content .leftBottomContent {
+    width: 70%;
+    margin-top: -10rpx;
+}
+.content .rightBottomContent {
+    width: 30%;
+    height: 90rpx;
+    margin-top: 60rpx;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.content .rightBottomContent image {
+    width: 170rpx;
+}
+.content .tel {
+    color: #fff;
+    font-size: 28rpx;
+    margin-bottom: 15rpx;
+}
+.content .mail {
+    color: #fff;
+    font-size: 28rpx;
+}
+.contentSecond {
+    background: url(https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/bg_card_list_02.png) no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+.contentSecond .rightBottomContent {
+    position: absolute;
+    left: 50rpx;
+    top: 0;
+}
+.contentSecond .leftContent {
+    margin-top: 100rpx;
+    width: 90%;
+    margin-left: 7%;
+}
+.contentSecond .job {
+    color: #e3e3e3;
+}
+.contentSecond .leftBottomContent {
+    width: 90%;
+    margin-left: 7%;
+    margin-top: 20rpx;
+}
+.icon-youxiang {
+    font-size: 14rpx;
+    display:inline-block;
+    width: 30rpx;
+    height: 30rpx;
+    border-radius: 100%;
+    line-height: 30rpx;
+    text-align: center;
+
+}
+.icon-web-icon- {
+    font-size: 24rpx;
+    display:inline-block;
+    width: 30rpx;
+    height: 30rpx;
+    border-radius: 100%;
+    line-height: 30rpx;
+    text-align: center;
+}
+.btns {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #fff;
+    display: flex;
+    height: 80rpx;
+    align-items: center;
+    border-radius: 0 0 25rpx 25rpx;
+    box-shadow: 0 0 20rpx #e7f2ff;
+}
+.btns .shareBtn {
+    flex: 1;
+    text-align: center;
+    border-right: 1rpx solid #e7e7e7;
+    font-size: 30rpx;
+    color: #666;
+    line-height: normal;
+    border: none;
+    background: transparent;
+}
+.shareBtn::after,.shareBtn::before {
+    border:none;
+    display: none;
+}
+.btns .delete {
+    flex: 1;
+    text-align: center;
+    font-size: 30rpx;
+    color: #666;
+}
+.btns .iconfont {
+    color: #cbced2;
+    font-size: 30rpx;
+    margin-right: 10rpx;
+}
+.btns .icon-fenxiang {
+    color: #84db02
+}
+.delete .delId {
+    color: #f46000;
+}
+.btns .icon-fenzutongji{
+  color: #8d64fe;
+}
+.icon-gongsimingcheng {
+    margin-right: 10rpx;
+}
+
+.content0 .leftBottomContent .iconfont {
+  margin-right: 5px;
+}
+.content1 {
+  background: url('https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/pic1@2x.png') no-repeat center;
+  background-size: cover;
+  padding-top: 50rpx;
+  /* box-shadow: none; */
+}
+.content2 {
+  background: url('https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/pic2@2x.png') no-repeat center;
+  background-size: cover;
+  /* box-shadow: none; */
+  padding-top: 110rpx;
+  padding-left: 50rpx;
+}
+.content3 {
+  background: url('https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/pic4@2x.png') no-repeat center;
+  background-size: cover;
+  /* box-shadow: none; */
+  padding-top: 40rpx;
+}
+.content4 {
+  background: url('https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/pic5@2x.png') no-repeat center;
+  background-size: cover;
+  /* box-shadow: none; */
+}
+.content5 {
+  background: url('https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/pic3@2x.png') no-repeat center;
+  background-size: cover;
+  /* box-shadow: none; */
+}
+.content6 {
+  background: url('https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/pic7@2x.png') no-repeat center;
+  background-size: cover;
+  /* box-shadow: none; */
+}
+
+.content1 .leftContent {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 100%;
+  border: 1px solid #99ffff;
+  overflow: hidden;
+}
+.content1 .midContent {
+  width: 33%;
+  margin-left: 30rpx;
+  color: #99ffff;
+}
+.content1 .midContent .name{
+  font-size: 36rpx;
+  font-weight: 700;
+}
+.content1 .midContent .job{
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+.content1 .rightContent {
+  width: 28%;
+  text-align: right;
+  vertical-align: top;
+  margin-left: 30px;
+  height: 90rpx;
+  border-radius: 0;
+  border:none;
+}
+.content1 .leftContent  image{
+  width: 100%;
+  min-height: 110rpx;
+}
+.content1 .leftBottomContent {
+  width: 45rpx;
+  height: 160rpx;
+  border-radius: 22rpx;
+  border: 1px solid #99ffff;
+  margin-left: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30rpx;
+  flex-direction: column;
+}
+.content1 .leftBottomContent .iconfont {
+  color: #99ffff;
+  margin-top: 7px;
+}
+.icon-web-icon- {
+  font-size: 15px;
+}
+.icon-youxiang {
+  font-size: 10px;
+}
+.icon-tubiao- {
+  font-size: 19px;
+}
+.content1 .rightBottomContent {
+  width: 80%;
+  color: #99ffff;
+  font-size: 24rpx;
+  margin-top: 64rpx;
+  text-align: left;
+  align-items:inherit;
+  margin-left: 10px;
+}
+.content1 .tel {
+  color: #99ffff;
+  margin-bottom: 0;
+}
+.content1 .mail {
+  color: #99ffff;
+  margin-top: 10rpx;
+}
+.content1 .company {
+  color: #99ffff;
+  margin-top: 10rpx;
+}
+.content2 .leftBottomContent {
+  margin-top: 10rpx;
+  width: 80%;
+}
+.content2 .leftBottomContent .iconfont {
+  color: #3399cc;
+}
+.content2 .rightBottomContent {
+  margin-top: 100rpx;
+  width: 20%;
+}
+.content2 .name {
+  color: #fff;
+}
+.content2 .job {
+  color: #fff;
+}
+.content2 .tel {
+  color: #fff;
+}
+.content2 .mail {
+  color: #fff;
+  margin-top: 5px;
+}
+.content2 .company {
+  color: #fff;
+}
+.content3 .leftBottomContent{
+  color: #666;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.content3 .rightContent {
+  margin-left: 25px;
+}
+.content3 .leftBottomContent .iconfont {
+  color: #fff;
+  margin-right: 5px;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 100%;
+  background-color: #022b5c;
+  line-height: 30rpx;
+  text-align: center;
+}
+.content3 .leftBottomContent .icon-youxiang {
+  color: #fff;
+  margin-right: 5px;
+  width: 35rpx;
+  height: 35rpx;
+  border-radius: 100%;
+  background-color: #022b5c;
+  line-height: 35rpx;
+  text-align: center;
+}
+.content3 .leftBottomContent .icon-tubiao- {
+  color: #fff;
+  margin-right: 5px;
+  width: 35rpx;
+  height: 35rpx;
+  border-radius: 100%;
+  background-color: #022b5c;
+  line-height: 35rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+.content3 .tel {
+  width: 43%;
+  margin-bottom: 0;
+  color: #fff;
+  font-size: 25rpx;
+}
+.content3 .mail {
+  width: 57%;
+  color: #fff;
+  font-size: 25rpx;
+}
+.content3 .company {
+  width: 100%;
+  color: #fff;
+  font-size: 25rpx;
+  height: 16px;
+  overflow: hidden;
+}
+.content3 .leftContent  {
+  width: 100%;
+  text-align: center;
+  margin-top: -14rpx;
+}
+.content2 .leftBottomContent .icon-web-icon- {
+  color: #fff;
+  margin-right: 5px;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 100%;
+  border: 1rpx solid #fff;
+  line-height: 40rpx;
+  text-align: center;
+}
+.content2 .leftBottomContent .icon-youxiang {
+  color: #fff;
+  margin-right: 5px;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 100%;
+  border: 1rpx solid #fff;
+  line-height: 40rpx;
+  text-align: center;
+}
+.content2 .leftBottomContent .icon-tubiao- {
+  color: #fff;
+  margin-right: 5px;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 100%;
+  border: 1rpx solid #fff;
+  line-height: 40rpx;
+  text-align: center;
+}
+.content4 .rightBottomContent {
+  margin-top: -30rpx;
+}
+.content4 .line {
+  width: 140rpx;
+  height: 5rpx;
+  background-color: #1c74f0;
+  margin-top: 20rpx;
+}
+.content4 .name  {
+  color: #1c74f0;
+}
+.content4 .tel {
+  color: #1c74f0;
+}
+.content4 .mail {
+  color: #1c74f0;
+  margin-top: 10rpx;
+}
+.content4 .company {
+  color: #1c74f0;
+}
+.content4 .leftBottomContent .iconfont {
+  width: 35rpx;
+  height: 35rpx;
+  line-height: 35rpx;
+  border-radius: 100%;
+  border: 1rpx solid #1c74f0;
+  text-align: center;
+  margin-right: 5rpx;
+}
+.content4 .leftBottomContent .icon-tubiao- {
+  font-size: 17px;
+} 
+.content4 .leftBottomContent {
+  margin-top: 20rpx;
+}
+.content6 {
+  padding-top: 30rpx;
+}
+.content6 .rightBottomContent {
+  width: 100%;
+  height: 50rpx;
+  margin-top: 0;
+}
+.content6 .leftBottomContent .icon-web-icon- {
+  color: #fff;
+  margin-right: 5px;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 100%;
+  border: 1rpx solid #fff;
+  line-height: 40rpx;
+  text-align: center;
+}
+.content6 .leftBottomContent .icon-youxiang {
+  color: #fff;
+  margin-right: 5px;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 100%;
+  border: 1rpx solid #fff;
+  line-height: 40rpx;
+  text-align: center;
+}
+.content6 .leftBottomContent .icon-tubiao- {
+  color: #fff;
+  margin-right: 5px;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 100%;
+  border: 1rpx solid #fff;
+  line-height: 40rpx;
+  text-align: center;
+}
+.content6 .mail {
+  margin-top: 5px;
+}
+.content6 .leftBottomContent {
+  margin-top: -20rpx;
+}
+.content5 .leftBottomContent .icon-web-icon- {
+  color: #fff;
+  margin-right: 5px;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 100%;
+  border: 1rpx solid #fff;
+  line-height: 40rpx;
+  text-align: center;
+}
+.content5 .leftBottomContent .icon-youxiang {
+  color: #fff;
+  margin-right: 5px;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 100%;
+  border: 1rpx solid #fff;
+  line-height: 40rpx;
+  text-align: center;
+}
+.content5 .leftBottomContent .icon-tubiao- {
+  color: #fff;
+  margin-right: 5px;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 100%;
+  border: 1rpx solid #fff;
+  line-height: 40rpx;
+  text-align: center;
+}
+.content5  .mail {
+  margin-top: 5px;
+}
+.content0 .leftBottomContent .iconfont {
+  margin-right: 5px;
+}
+.content0 .leftBottomContent .icon-web-icon-,.content0 .leftBottomContent .icon-youxiang {
+  width: 35rpx;
+  height: 35rpx;
+  line-height: 35rpx;
+  text-align: center;
+  border: 1rpx solid #fff;
+  border-radius: 100%;
+}

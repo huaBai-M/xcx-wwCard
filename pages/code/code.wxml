@@ -1,0 +1,5 @@
+<view class='codeBox'>
+  <painter  palette="{{template}}" url="{{url}}" bind:imgOK="onImgOK" />
+  <view bind:tap='saveImage'class="codeBox_abt">保存到相册</view>
+  <van-toast id="van-toast" />
+</view>

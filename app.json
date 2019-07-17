@@ -1,0 +1,66 @@
+{
+  "pages": [
+    "pages/Bootpage/Bootpage",
+    "pages/index/index",
+    "pages/cardlist/cardlist",
+    "pages/chartlist/chartlist",
+    "pages/bangding/bangding",
+    "pages/login/login",
+    "pages/operation/operation",
+    "pages/code/code",
+    "pages/AI/AI",
+    "pages/products/products",
+    "pages/detail/detail",
+    "pages/video/video",
+    "pages/play/play",
+    "pages/chart/chart",
+    "pages/callGroup/callGroup",
+    "pages/addCallGroup/addCallGroup",
+    "pages/cardCode/cardCode",
+    "pages/module/module"
+  ],
+"window": {
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "WeChat",
+  "navigationBarTextStyle": "black"
+},
+"tabBar": {
+  "color": "#949bb7",
+  "selectedColor": "#006CFF",
+  "backgroundColor": "#fff",
+  "borderStyle": "black",
+  "list": [
+    {
+      "iconPath": "images/icon_homepage_unclicked.png",
+      "selectedIconPath": "images/icon_homepage_clicked.png",
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    },
+    {
+      "iconPath": "images/icon_product_unclicked.png",
+      "selectedIconPath": "images/icon_product_clicked.png",
+      "pagePath": "pages/products/products",
+      "text": "产品"
+    },
+    {
+      "iconPath": "images/icon_video_unclicked.png",
+      "selectedIconPath": "images/icon_video_clicked.png",
+      "pagePath": "pages/video/video",
+      "text": "看看"
+    },
+    {
+      "iconPath": "images/icon_message_unclicked.png",
+      "selectedIconPath": "images/icon_message_clicked.png",
+      "pagePath": "pages/chartlist/chartlist",
+      "text": "消息"
+    }
+  ]
+},
+"usingComponents":{
+  "van-toast": "/dist/toast/index",
+  "empower": "/components/empower/empower",
+  "gratis": "/components/gratis/gratis"
+},
+  "sitemapLocation": "sitemap.json"
+}

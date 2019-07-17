@@ -1,0 +1,243 @@
+/* pages/Propaganda/Propaganda.wxss */
+.propagamda_banner{
+  position: relative;
+}
+.slide-banner{
+  width: 100%;
+  height: 300rpx;
+}
+.slide-banner .slide-image{
+  width: 100%;
+  height: 100%;
+}
+image {
+width:auto;
+height:auto;
+display:block;
+overflow:auto;
+}
+
+.swiper_form{
+  width: 563rpx;
+  height: 74rpx;
+  line-height: 74rpx;
+  position: absolute;
+  color: #fff;
+  background: #fff;
+  border-radius: 2000rpx;
+  overflow: hidden;
+  z-index: 10;
+  font-size: 24rpx;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 53rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.swiper_form input{
+  display: block;
+  width: 362rpx;
+  height: 100%;
+  padding-left: 52rpx;
+  color: #000;
+}
+.swiper_form .swiper_formAbt{
+  height: 100%;
+  width: 200rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  background: #006eff;
+  border: none;
+  display: 700;
+  color: #fff;
+  border-radius: 0;
+  box-shadow: -1px 10px 36px -9px rgba(0, 108, 255, 0.5);
+}
+
+
+
+.imgOne{
+  width:auto ;
+  text-align: center;
+  position: relative;
+}
+.imgOne .imgOne_img{
+  margin: auto;
+}
+.imgTne{
+  width: 100%;
+  margin: 0;
+}
+.imgTne  .imgOne_img{
+  margin: 100%;
+}
+.imgOne_formAbt{
+  width: 400rpx;
+  height: 92rpx;
+  background: #006eff;
+  color: #fff;
+  border-radius: 2000rpx;
+  border: none;
+  text-align: center;
+  line-height: 92rpx;
+  position: absolute;
+  bottom: 60rpx;
+  left: 0;
+  right: 0;
+  margin: auto;
+  box-shadow: -1px 10px 36px -9px rgba(0, 108, 255, 0.5);
+}
+.propaganda_foot{
+  background: #eee;
+  padding: 60rpx 0 24rpx 0;
+  text-align: center;
+}
+.propaganda_foot .title{
+  font-size: 38rpx;
+  color: #333;
+  padding-bottom: 10rpx;
+}
+.propaganda_foot .title_p{
+  font-size: 22rpx;
+  color: #666;
+  padding-bottom: 40rpx;
+}
+.propaganda_foot .propaganda_form{
+  width: 650rpx;
+  height: 90rpx;
+  border-radius: 5rpx;
+  background: #fff;
+  margin: auto;
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+  
+}
+.propaganda_foot .propaganda_form text{
+  padding-left: 20rpx;
+  color: #818181;
+}
+.propaganda_foot .propaganda_form input{
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: #000;
+  font-size: 22rpx;
+  text-align:left;
+  padding-left: 20rpx;
+}
+.proppropaganda_formAbt{
+  width: 220rpx;
+  height: 100%;
+  background: #006eff;
+  color: #fff;
+  border: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  box-shadow: -1px 10px 36px -9px rgba(0, 108, 255, 0.5);
+}
+.propaganda_form_yanzhen{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.propaganda_form_yanzhen button{
+  width: 225rpx;
+  font-size: 28rpx;
+  color: #006eff;
+  background: none;
+  border: none;
+  height: 100%;
+  line-height: 90rpx;
+  text-decoration: underline;
+  
+}
+.propaganda_form_yanzhen button::after{display: none;}
+.propaganda_foottxt{
+  font-size: 24rpx;
+  color: #999;
+  height: 74rpx;
+  line-height: 74rpx;
+  text-align: center;
+  margin-top: 50rpx;
+ /* border-top: 1rpx solid rgba('); */
+}
+.experience{
+  width: 651rpx;
+  height: 641rpx;
+  margin: auto;
+  background: #fff;
+  border-radius: 10rpx;
+  overflow: hidden;
+  z-index: 99999;
+  position: relative;
+  padding: 28rpx 0;
+}
+.experience .title{
+  padding: 0 40rpx;
+  font-size: 38rpx;
+  color: #333;
+  text-align: center;
+  padding-bottom: 50rpx;
+  border-bottom: 1rpx solid #e7eae9;
+  margin-bottom: 70rpx;
+}
+.clear{
+  text-align: right;
+  padding: 0 40rpx;
+}
+.experience_form{
+  width: 576rpx;
+  height: 89rpx;
+  border: 1rpx solid #e7eae9;
+  margin: auto;
+  margin-bottom: 30rpx;
+  border-radius: 5rpx;
+  padding-left: 37rpx;
+  display: flex;
+  align-items: center;
+}
+.experience_form input{
+  height: 100%;
+  color: #cecece;
+  font-weight: normal;
+  font-size: 32rpx;
+}
+.experience_form .error{
+  color: red;
+  position: relative;
+  top: 2rpx;
+  padding: 0 5rpx 0 0; 
+}
+.experience_form .label{
+  font-size: 32rpx;
+  color: #333;
+}
+.vanpopup_formAbt{
+  width:518rpx;
+  height: 90rpx;
+  background: #006eff;
+  color: #fff;
+  border-radius: 2000rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40rpx;
+  box-shadow: -1px 10px 36px -9px rgba(0, 108, 255, 0.5);
+}
+.foot_formAbt{
+    width:518rpx;
+  height: 90rpx;
+  background: #006eff;
+  color: #fff;
+  border-radius: 2000rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40rpx;
+  box-shadow: -1px 10px 36px -9px rgba(0, 108, 255, 0.5);
+}

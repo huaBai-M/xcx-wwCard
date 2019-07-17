@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "产品",
+    "usingComponents": {
+      "sideedge": "/components/sideedge/sideedge"
+    }
+}

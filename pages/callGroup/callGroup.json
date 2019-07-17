@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "名片分组",
+  "navigationBarBackgroundColor": "#fff",
+  "usingComponents": {
+    "van-tab": "../../dist/tab/index",
+    "van-tabs": "../../dist/tabs/index",
+    "van-dialog": "../../dist/dialog/index",
+    "van-popup": "../../dist/popup/index",
+    "van-area": "../../dist/area/index",
+    "van-picker": "../../dist/picker/index",
+    "van-card": "../../dist/card/index",
+    "cardlists": "/components/cardlists/cardlists",
+    "groupimg": "/components/groupimg/groupimg"
+  }
+}

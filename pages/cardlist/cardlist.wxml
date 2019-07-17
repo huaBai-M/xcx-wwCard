@@ -1,0 +1,31 @@
+ <empower></empower>
+<view class='cardListTopAbt'>
+  <view class='cardListTopAbt_abt {{abtClass?"cardListTopAbt_activeAbt":""}}'data-index="0" bindtap='activeAbt'>全部名片</view>
+  <view class='cardListTopAbt_abt {{abtClass?"":"cardListTopAbt_activeAbt"}}'data-index="1" bindtap='activeAbt'>名片夹</view>
+</view>
+<view wx:if="{{abtClass}}">
+  <cardlists id="cardlists"  data="{{cardlist}}" start="{{true}}" bind:mycardvent="onRefresh" bind:mygrouping="onGrouping"></cardlists>
+</view>
+<view wx:if="{{!abtClass}}">
+  <view class='group_content'>
+  <view class='group_contentList' bindtap='allGroup' wx:for="{{columns}}"   wx:key="index" data-item="{{item}}">
+    <view class='group_contentLeft'>
+        <groupimg img="{{item.relations}}" id="groupimg"></groupimg>
+    </view>
+    <view class='group_contentRight'style="border-bottom : {{index==columns.length-1?'':'1px solid #f2f2f2'}};">
+      <view class='title'>{{item.groupName}}({{item.relations.length}})</view>
+      <view class='p'wx:if="{{item.groupType!=null}}">{{item.groupType}}</view>
+    </view>
+  </view>
+</view>
+
+<view class='group_newcard' bindtap='addGroup'>
+  创建新名片组
+</view>
+</view>
+
+<van-dialog id="van-dialog" />
+<van-toast id="van-toast" />
+<van-popup show="{{show}}" position="bottom" close-on-click-overlay="true" bind:click-overlay="clearPopup">
+  <van-picker columns="{{ columns }}"  bind:confirm="confirm" bind:cancel="cancel"show-toolbar/>
+</van-popup>

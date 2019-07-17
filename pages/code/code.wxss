@@ -1,0 +1,21 @@
+/* pages/code/code.wxss */
+page {
+    width: 100%;
+    height: 100%;
+    background: #f0f8ff;
+    overflow: hidden;
+}
+.codeBox{
+  margin: 105rpx 50rpx 0;
+}
+.codeBox_abt{
+  width: 265rpx;
+  height: 95rpx;
+  text-align: center;
+  line-height: 95rpx;
+  border-radius: 5px;
+  background: #00a0e9;
+  color: #fff;
+  margin: 76rpx auto ;
+  font-size: 32rpx;
+}

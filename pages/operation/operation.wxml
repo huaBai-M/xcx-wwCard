@@ -1,0 +1,19 @@
+<view class='imgTop'>
+    <view class="left-top">
+      <view class="style">名片样式</view>
+      <view class="styles">名片样式 <text>{{nameMol}}</text></view>
+    </view>
+    <view class="right-top" bindtap="linkToMol">
+      <view class="iconfont icon-you" ></view>
+    </view>
+</view>
+<view class='pageBody'>
+  <basicinformation id="basicinformation" bind:myopertionevent="onMyopertionEvent" receiveData="{{receiveData}}"></basicinformation>
+  <view class='btns'>
+    <van-button type="default" bindtap='concel'>取消</van-button>
+    <van-button type="info" bindtap='confirm'>确定</van-button>
+</view>
+</view>
+
+<van-dialog id="van-dialog" />
+<van-toast id="van-toast" />

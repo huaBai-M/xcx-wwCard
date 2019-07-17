@@ -1,0 +1,7 @@
+<basicinformation id="basicinformation" bind:myloginevent="onMyloginEvent" receiveData="{{receiveData}}"></basicinformation>
+<view class='btns'>
+    <van-button type="default" bindtap='concel'>取消</van-button>
+    <van-button type="info" bindtap='confirm'>登录</van-button>
+</view>
+  <van-dialog id="van-dialog" />
+  <van-toast id="van-toast" />

@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-field": "../../dist/field/index",
+    "van-button": "../../dist/button/index",
+    "van-popup": "../../dist/popup/index",
+    "van-icon": "../../dist/icon/index",
+    "van-dialog": "../../dist/dialog/index",
+    "van-toast": "../../dist/toast/index"
+  }
+}

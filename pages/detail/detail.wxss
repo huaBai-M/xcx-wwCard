@@ -1,0 +1,126 @@
+/* pages/detail/detail.wxss */
+page {
+    width: 100%;
+    height: 100%;
+}
+.pageBody {
+    width: 100%;
+    min-height: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding-bottom: 50rpx;
+    position: relative;
+}
+.remark .wxParse-img{
+  max-width: 100%
+}
+.proImg image {
+    width: 100%;
+}
+.proMesg {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 55rpx;
+}
+.proMesg .name {
+    color: #333;
+    font-size: 36rpx;
+    font-weight: 700;
+}
+.proMesg .num {
+    color: #999;
+    font-size: 26rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-bottom: 1rpx solid #e7e7e7;
+}
+.proMesg .num image {
+    width: 24rpx;
+    margin-left: 10rpx; 
+}
+.proMesg .remark,
+.proMesg .remark2 {
+    color: #333;
+    font-size: 30rpx;
+    margin-top: 30rpx;
+    line-height: 60rpx;
+    text-align: left;
+}
+.remarkImg image{
+    width: 100%;
+    margin-top: 20rpx;
+}
+.call {
+    width: 90%;
+    height: 120rpx;
+    display: flex;
+    align-items: center;
+    border-radius: 60rpx;
+    background: linear-gradient(to right, #0088fb , #00bcec);
+    padding: 0 20rpx;
+    box-sizing: border-box;
+    position: fixed;
+    left: 5%;
+    bottom: 70rpx;
+    box-shadow: 0 0 20rpx #98e1f4;
+}
+.call .callImg{
+     width: 80rpx;
+     height: 80rpx;
+    border-radius: 20000rpx;
+    margin-right: 20rpx;
+    overflow: hidden;
+}
+.call image {
+   width: 100%;
+}
+.call .text {
+    width: 63%;
+    color: #fff;
+    overflow: hidden;
+    margin-right: 30rpx;
+}
+.call .name {
+    font-size: 30rpx;
+    font-weight: 700;
+    
+}
+.call .company {
+    font-size: 30rpx;
+    width:100%;
+    overflow:hidden;
+    height:35rpx;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+.call .iconfont {
+    color: #fff;
+    width: 13%;
+    text-align: center;
+    font-size: 70rpx;
+}
+.call .icon-liuyan{
+    font-size: 56rpx;
+    border-right: 1rpx solid #fff;
+}
+.call button {
+   border: none; 
+   padding-left: 20rpx;
+   background-color: transparent;
+}
+.call button.btn::after{
+    border: none;
+}
+.call .btnMessage {
+    padding: 0;
+    width: 13%;
+    height: 60rpx;
+    border: none;
+    border-radius: 0;
+    padding-left: 0;
+    line-height: 60rpx;
+    border-right: 1rpx solid #fff;
+}
+.call .btnMessage::after {
+    border:none;
+}

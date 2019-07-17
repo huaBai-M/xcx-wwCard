@@ -1,0 +1,10 @@
+<!--pages/code/code.wxml-->
+<page>
+  <pop id='dialog'></pop>
+  <view class='pageBody'>
+        <view class='call-company' animation="{{animationData}}">{{cardData.company==null?" ":cardData.company}}</view>        
+        <view class='call-img' animation="{{animationData1}}"><image src="{{cardData.wxCardCode}}" mode='widthFix'></image></view>
+        <view class=' 'animation="{{animationData}}">{{cardData.title==null?"":cardData.title}}</view>
+        <view class='call-name' animation="{{animationData}}">{{cardData.name}}</view>       
+  </view>
+</page>

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "看看",
+  "usingComponents": {
+    "van-row": "../../dist/row/index",
+    "van-col": "../../dist/col/index",
+    "van-popup": "/dist/popup/index",
+    "gratis": "/components/gratis/gratis"
+  }
+}

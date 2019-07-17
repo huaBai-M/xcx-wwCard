@@ -1,0 +1,33 @@
+<!-- 本期推荐 -->
+<view class="groom">
+  <view class='proLists'>
+    <view class='list'>
+      <swiper class="swiper" bindchange="swiperChange"  autoplay="true" interval="5000" duration="500" circular="true">
+        <swiper-item wx:for="{{HotProduct}}" wx:key="index" wx:for-item="list"  >
+          <view class='raduis' wx:for="{{list}}" wx:key="index" wx:for-item="i" data-value="{{i}}" data-id='{{item.id}}' data-html='{{item}}' bindtap='clickPro'>
+            <view class='addRadius'>
+              <view class='imgPro'>
+                <image src='{{i.banner}}' mode='widthFix' style="height:102.968px"></image>
+              </view>
+              <view class='textPro'>
+                <view class='namePro'>{{i.productName}}</view>
+                <view class='imgsView'>
+                  <view class='imgItem' wx:for="{{i.lastVisitImgs}}" wx:key="j" wx:for-item="j">
+                    <image src='{{j}}' mode='widthFix'></image>
+                  </view>
+                </view>
+                <view class='numPro'>等{{i.todayVisitCount==null?'0':i.todayVisitCount}}人已查看</view>
+              </view>
+              
+            </view>
+          </view>
+        </swiper-item>
+      </swiper>
+      <view class='swiper_dot'>
+        <view wx:for="{{HotProduct}}" wx:key class="dot{{index == currentSwiper ? ' active' : ''}}"></view>
+      </view>
+    </view>
+
+  </view>
+  
+</view>

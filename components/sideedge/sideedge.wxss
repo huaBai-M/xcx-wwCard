@@ -1,0 +1,61 @@
+@import "/font/iconfont.wxss";
+button{
+  padding: 0;
+  margin: 0;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.side {
+    position: fixed;
+    right: 20rpx;
+    bottom: 80rpx;
+}
+.sideShow {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-align: center;
+    line-height: 80rpx;
+}
+.sideShow .icon-gengduo {
+    font-size: 55rpx;
+}
+.sideHide {
+    width: 80rpx;
+    height: 180rpx;
+    background-color: #fff;
+    border-radius: 40rpx;
+    box-shadow: 0 0 20rpx #ccc;
+    text-align: center;
+    padding: 10rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.sideHide .icon-liuyan {
+    margin-bottom: 40rpx;
+}
+.sideHide .iconfont {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 100%;
+    font-size: 45rpx;
+    line-height: 60rpx;
+    text-align: center;
+}
+.sideHide .white {
+    color: #006cff;
+    background-color: #fff;
+}
+.sideHide .blue {
+    color: #fff;
+    background-color: #006cff;
+}

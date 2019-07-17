@@ -1,0 +1,27 @@
+ <empower></empower>
+<view class='recentchat-wrapper'>
+  <view wx:if="{{chatList.length != 0}}" wx:for="{{chatList}}" wx:for-item="message" wx:key="message.time" data-session='{{message.account}}' data-headimg='{{message.img}}' data-sign='{{message.sign}}'  data-nickName='{{message.title}}'data-i='{{index}}'  bindtap='chartPage'> 
+    <swipe-delete>
+      <view  class='recentchat-item' hover-class='recentchat-item-hover' >
+        <image  src='{{message.img}}' class='recentchat-item-img'></image>
+        <view class='recentchat-item-right' data-account='{{message.content}}'>
+          <view class='recentchat-item-top'>
+           <text class='recentchat-item-title'>{{message.title }}</text>
+            <text class='recentchat-item-time'>{{message.time}}</text>
+          </view>
+          <view class='recentchat-item-bottom'>
+            <view style='display:flex;align-items:center;'>
+            <!-- <text class='recentchat-item-status'>[{{message.status}}]</text> -->
+              <text class='recentchat-item-desc'>{{message.content}}</text>
+            </view>
+            <view wx:if="{{message.sign}}" class='recentchat-item-unread'>{{message.sign || ''}}</view>
+          </view>
+        </view>
+      </view>
+    </swipe-delete>
+  </view>
+  <view wx:if="{{ifhide}}" class='no-recent productNull'>
+    <image src="https://page-bucket.oiaqye7985.com/wechat/mini-card/imgs/icon4@2x.png" class='no-recent-image' mode='widthFix'></image>
+    <view class='proN'>暂无聊天</view>
+  </view>
+</view>
